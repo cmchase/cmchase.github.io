@@ -35,14 +35,14 @@ grunt.loadNpmTasks('grunt-contrib-less');
         files: ['<%= yeoman.app %>/_less/**/*.less'],
         tasks: ['less:server']
       },
-      coffee: {
-        files: ['<%= yeoman.app %>/_src/**/*.coffee'],
-        tasks: ['coffee:server']
-      },
-      coffeeTest: {
-        files: ['test/spec/**/*.coffee'],
-        tasks: ['coffee:test']
-      },
+      // coffee: {
+      //   files: ['<%= yeoman.app %>/_src/**/*.coffee'],
+      //   tasks: ['coffee:server']
+      // },
+      // coffeeTest: {
+      //   files: ['test/spec/**/*.coffee'],
+      //   tasks: ['coffee:test']
+      // },
       jekyll: {
         files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
                 '_config.yml',
@@ -55,9 +55,9 @@ grunt.loadNpmTasks('grunt-contrib-less');
         },
         files: [
           '.jekyll/**/*.html',
-          '{.tmp,<%= yeoman.app %>}/assets/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          '{.tmp,<%= yeoman.app %>}/assets/css/**/*.css'
+          // '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
+          // '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
     },

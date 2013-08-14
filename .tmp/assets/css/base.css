@@ -960,7 +960,7 @@ input[type="button"].btn-block {
   display: inline;
 }
 .cover .content .internal-links li a {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(51, 51, 51, 0.5);
   border: 1px solid #ffffff;
   border-radius: 5px;
   color: #ffffff;
@@ -1157,7 +1157,7 @@ input[type="button"].btn-block {
   display: inline;
 }
 .inverse .cover .content .internal-links li a {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #333333;
   border-radius: 5px;
   color: #333333;
@@ -1247,7 +1247,7 @@ input[type="button"].btn-block {
 }
 @media (min-width: 1000px) {
   .writing .cover {
-    background-color: #333333;
+    background-color: #ffffff;
     border-right: 1px solid #7fa6a5;
     height: 100%;
     position: fixed;
@@ -1260,7 +1260,7 @@ input[type="button"].btn-block {
     background-size: cover;
     background-position: center;
     border-right: 1px solid #7fa6a5;
-    box-shadow: inset -3px 0 0 #333333;
+    box-shadow: inset -3px 0 0 #ffffff;
     position: absolute;
     overflow: hidden;
     float: left;
@@ -1345,7 +1345,7 @@ input[type="button"].btn-block {
     display: inline;
   }
   .writing .cover .content .internal-links li a {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #7fa6a5;
     border-radius: 5px;
     color: #7fa6a5;
@@ -1355,8 +1355,8 @@ input[type="button"].btn-block {
     transition: all 0.25s;
   }
   .writing .cover .content .internal-links li a:hover {
-    background-color: #333333;
-    border-color: #333333;
+    background-color: #ffffff;
+    border-color: #ffffff;
     color: #7fa6a5;
   }
   .writing .cover .content .social-links {
@@ -1553,7 +1553,7 @@ input[type="button"].btn-block {
   display: inline;
 }
 .about .cover .content .internal-links li a {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #993333;
   border-radius: 5px;
   color: #993333;
