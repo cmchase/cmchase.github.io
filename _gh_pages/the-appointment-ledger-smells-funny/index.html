@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cory Chase, St Petersburg/Tampa, FL Front-End Web Developer and Designer</title>
+    <title>The Appointment Ledger Smells Funny</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="/assets/css/base.css">
 
   </head>
-  <body class="home">
+  <body class="">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
     <aside class="cover">
-        <div class="background" style="background-image: url(/assets/img/covers/driveway.jpg)"></div>
+        <div class="background" style="background-image: url()"></div>
 
         <div class="content">
             <div class="branding" data-link="/">
@@ -883,76 +883,43 @@
     </aside>
 
     <main class="main-content">
-        <section class="posts">
-	
-		
-		    <article>
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">15</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h1 class="post-title">Appointment Ledger: Addendum</h1>
-		        <p>Not 18 hours after posting about <a href="/the-appointment-ledger-smells-funny/">a weird code smell</a>, we found a better solution to using NotificationCenter: exclusiveTouch. Actually, by &quot;we&quot; I mean &quot;John&quot;, the principal software developer I&#39;m working with for our lane application.</p>
+        <article class="post">
+	<h1 class="post-title">The Appointment Ledger Smells Funny</h1>
+	<time>
+    	<span class="month">Jul</span>
+    	<span class="day">14</span>
+    	<span class="year">2013</span>
+	</time>
+	<p>I recently posted about how <a href="/ios-brain-leak/">my brain leaks out all the Objective-C I know</a> if I go too long without using it, which is barely an exaggeration,  so I made some time in my day this past Friday to clear out a last-minute bug. In that same post, I mentioned how I feel in love with NSNotificationCenter, which I used to try to handle a bug where the UI gets all wonky if the the user taps the VIN Search button while the user had focus on the SearchBar. (I&#39;m simply disabling the VIN Search button until the SearchBar resigns first responder.)</p>
 
-<p>Setting exclusiveTouch to YES within the child controller for the buttons navigationController.navigationBar totally did the trick. We still have to use the NotificationCenter elsewhere, but John&#39;s solution is much cleaner.</p>
+<p><a href="/assets/img/2013/07/ledger.png"><img src="/assets/img/2013/07/ledger-300x227.png" alt="Tapping the VIN Search button while the SearchBar had first responder would cause the SearchBar to scroll up behind the UINavigationController."></a></p>
 
-<p>Thanks, John, at least you&#39;re not a jerk about being right all the time.</p>
+<p>Tapping the VIN Search button while the SearchBar had first responder would cause the SearchBar to scroll up behind the UINavigationController.</p>
 
-		    </article>
-		    <h2>
-		    	<a href="/all-posts.html" class="all-posts">More Posts &raquo;</a>
-			</h2>
-	    
-	
-		
-		    <article class="post-link half" data-link="/the-appointment-ledger-smells-funny">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">14</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">The Appointment Ledger Smells Funny</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/one-more-thing">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">12</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">One More Thing...</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/ios-brain-leak">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">09</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">iOS Brain Leak</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/bm-high-five">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">02</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">BM? High-five!</h3>
-		    </article>
-	    
-	
-</section>
+<p>Well, QA got really creative and decided to see what would happen if they tapped and held the VIN Scan button and then tapped the SearchBar. The solution wasn&#39;t really that complicated, but it took me a bit to figure out what I needed to do and  NSNotificationCenter helped me out again:</p>
 
-<section style="clear: both;">
-</section>
+<ul>
+<li><p>UIBarButtonItems don&#39;t seem give  access to the control&#39;s events, so I had convert it to a UIButton.</p></li>
+<li><p>On TouchDown I send a message to Notification Center so the nested view can disable the SearchBar.</p></li>
+<li><p>On TouchUpInside and TouchUpOutside I send another to reenable the SearchBar, but only on the former do I invoke the method I made out of the old VIN Scan&#39;s IBAction.</p></li>
+</ul>
+
+<p>This approach really doesn&#39;t feel right because I&#39;ve now got 3 observers on the child view for the touch events and 2 on the parent for disabling the VIN Scan button -- it really does have a weird smell to it -- but everything I&#39;ve read seems to point to NSNotificationCenter as the way go. I really don&#39;t know of a better way but I&#39;m sure I&#39;ll kick myself in the ass about this solution on some far-off date.</p>
+
+</article>
+
+<nav id="post-navigation"> 
+	<h2>More Reading</h2>
+     
+        <a href="/one-more-thing" title="Previous Post: 
+One More Thing..." class="pull-left">&laquo; One More Thing...</a> 
+     
+     
+        <a href="/appointment-ledger-addendum" title="next Post: 
+Appointment Ledger: Addendum" class="pull-right">Appointment Ledger: Addendum &raquo; </a> 
+     
+</nav> 
+
     </main>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

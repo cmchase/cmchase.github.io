@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cory Chase, St Petersburg/Tampa, FL Front-End Web Developer and Designer</title>
+    <title>Zebra Striping Collapsed Table Rows</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="/assets/css/base.css">
 
   </head>
-  <body class="home">
+  <body class="">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
     <aside class="cover">
-        <div class="background" style="background-image: url(/assets/img/covers/driveway.jpg)"></div>
+        <div class="background" style="background-image: url()"></div>
 
         <div class="content">
             <div class="branding" data-link="/">
@@ -883,76 +883,75 @@
     </aside>
 
     <main class="main-content">
-        <section class="posts">
-	
-		
-		    <article>
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">15</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h1 class="post-title">Appointment Ledger: Addendum</h1>
-		        <p>Not 18 hours after posting about <a href="/the-appointment-ledger-smells-funny/">a weird code smell</a>, we found a better solution to using NotificationCenter: exclusiveTouch. Actually, by &quot;we&quot; I mean &quot;John&quot;, the principal software developer I&#39;m working with for our lane application.</p>
+        <article class="post">
+	<h1 class="post-title">Zebra Striping Collapsed Table Rows</h1>
+	<time>
+    	<span class="month">Apr</span>
+    	<span class="day">13</span>
+    	<span class="year">2012</span>
+	</time>
+	<p>About 6 months ago we had to add some data to an already overloaded ROI report. We were displaying the aggregated results for about 20 categories and we needed to include some sub-categories.</p>
 
-<p>Setting exclusiveTouch to YES within the child controller for the buttons navigationController.navigationBar totally did the trick. We still have to use the NotificationCenter elsewhere, but John&#39;s solution is much cleaner.</p>
+<p>I&#39;m a firm believer that good reports and dashboards start by limiting yourself to the important bits. I suggested that we put this detailed information on separate drilldown screens but key stakeholders insisted on keeping everything on a single page.</p>
 
-<p>Thanks, John, at least you&#39;re not a jerk about being right all the time.</p>
+<h2>Too Much Information</h2>
 
-		    </article>
-		    <h2>
-		    	<a href="/all-posts.html" class="all-posts">More Posts &raquo;</a>
-			</h2>
-	    
-	
-		
-		    <article class="post-link half" data-link="/the-appointment-ledger-smells-funny">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">14</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">The Appointment Ledger Smells Funny</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/one-more-thing">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">12</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">One More Thing...</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/ios-brain-leak">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">09</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">iOS Brain Leak</h3>
-		    </article>
-	    
-	
-		
-		    <article class="post-link half" data-link="/bm-high-five">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">02</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">BM? High-five!</h3>
-		    </article>
-	    
-	
-</section>
+<p>To be clear, we&#39;re talking 20 categories, with up to a dozen sub-categories each, reporting on 16 metrics. That&#39;s a ton of information to cram into a single screen, especially when you consider that a very large minority (over 30%) of our customers run their monitors at 1024 x 768.</p>
 
-<section style="clear: both;">
-</section>
+<p>After some debate, which lead to name-calling, which then lead to a bit of hair pulling, I was happy to compromise by collapsing child columns and data rows into their parent categories. (It&#39;s not ideal, but it beats the hell out of the alternative of side-scrolling.)</p>
+
+<h2>Long Story Short</h2>
+
+<p>We got the new stuff in, collapsing/expanding worked great, but the styling was off. We&#39;d been using the <a href="http://css-tricks.com/how-nth-child-works/">CSS :nth-child pseudo-selector</a> to handle our zebra-striping and it just kept freaking out with the hidden rows. (Examples show content from my dev environment):</p>
+
+<p><code>tr:nth-child(even) td { background: #ededed; }</code></p>
+
+<p><img src="/assets/img/2012/04/roi01.png" alt="Parts Arrival should show the alternate background"></p>
+
+<p><img src="/assets/img/2012/04/roi02.png" alt="But was being applied to the hidden row &quot;Interval #1&quot;"></p>
+
+<p>No problem, we&#39;ll just add a class to the parent rows and get more specific with the selector:</p>
+
+<blockquote>
+<p><code>tr.parent:nth-child(even) td { background: #ededed; }</code></p>
+</blockquote>
+
+<p>Nope. That didn&#39;t do it. I spent some time with Google and I tried a bunch of variations on the selector, including nth-of-type, only to things worse in varying degrees.</p>
+
+<p>It turns out that the selectors just didn&#39;t matter because the browser was <a href="http://www.w3schools.com/cssref/sel_nth-child.asp">only looking at the element itself</a> (TR). (I&#39;m sure I could have worked this out if I was willing to nest the child rows in more mark-up, but I just wasn&#39;t willing to go that route.)</p>
+
+<p>I really, really wanted to handle this with abstracted CSS. There are just a few of us front-end developers to support around 20 back-end guys (tee-hee!), and the more we can make the content design simply work for them the better.</p>
+
+<p>(There&#39;s also the issue of maintaining a 500+ page web application -- the more concrete and page-specific the solution, the harder it is to keep up with.)</p>
+
+<h2>Stop Fighting It and Fix the Damn Thing</h2>
+
+<p>Like so many problems in front-end development, jQuery was the solution:</p>
+
+<blockquote>
+<p><code>$(&quot;tr.parent:even&quot;).addClass(&quot;alt&quot;);</code></p>
+</blockquote>
+
+<p><img src="/assets/img/2012/04/roi03.png" alt="The backgrounds now alternate correctly"></p>
+
+<p><img src="/assets/img/2012/04/roi04.png" alt="And the child rows were able to get their own styling."></p>
+
+<p>I just know that one of these days an engineer is going to come in and screw this up, but jQuery saved the day because its selector engine is just so, so much better.</p>
+
+</article>
+
+<nav id="post-navigation"> 
+	<h2>More Reading</h2>
+     
+        <a href="/cory-chase-porn-star" title="Previous Post: 
+Cory Chase: Porn Star" class="pull-left">&laquo; Cory Chase: Porn Star</a> 
+     
+     
+        <a href="/lttp-steams-facebook-integration" title="next Post: 
+LTTP: Steam's Facebook Integration" class="pull-right">LTTP: Steam's Facebook Integration &raquo; </a> 
+     
+</nav> 
+
     </main>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
