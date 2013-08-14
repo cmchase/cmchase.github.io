@@ -6,7 +6,7 @@ var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
 var yeomanConfig = {
-  app: '', // 'app'
+  app: '.', // 'app'
   dist: 'dist'
 };
 
@@ -191,7 +191,7 @@ grunt.loadNpmTasks('grunt-contrib-less');
           expand: true,
           cwd: '<%= yeoman.app %>/_src',
           src: '**/*.coffee',
-          dest: '.tmp/assets/js',
+          dest: 'assets/js',
           ext: '.js'
         }]
       },
@@ -223,22 +223,22 @@ grunt.loadNpmTasks('grunt-contrib-less');
         }
       }
     },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'Gruntfile.js',
-        '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
-        'test/spec/**/*.js',
-        '!<%= yeoman.app %>/assets/js/vendor/**/*',
-        '!<%= yeoman.app %>/_bower_components/**/*'
-      ],
-      report: [
-        '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
-        '!<%= yeoman.app %>/assets/js/vendor/**/*'
-      ]
-    },
+    // jshint: {
+    //   options: {
+    //     jshintrc: '.jshintrc'
+    //   },
+    //   all: [
+    //     'Gruntfile.js',
+    //     '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
+    //     'test/spec/**/*.js',
+    //     '!<%= yeoman.app %>/assets/js/vendor/**/*',
+    //     '!<%= yeoman.app %>/_bower_components/**/*'
+    //   ],
+    //   report: [
+    //     '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
+    //     '!<%= yeoman.app %>/assets/js/vendor/**/*'
+    //   ]
+    // },
     csscss: {
       options: {
         bundleExec: true,
@@ -254,14 +254,14 @@ grunt.loadNpmTasks('grunt-contrib-less');
              '<%= yeoman.app %>/_less/**/*.scss']
       }
     },
-    csslint: {
-      options: {
-        csslintrc: '.csslintrc'
-      },
-      report: {
-        src: ['{.tmp,<%= yeoman.app %>}/assets/css/**/*.css']
-      }
-    },
+    // csslint: {
+    //   options: {
+    //     csslintrc: '.csslintrc'
+    //   },
+    //   report: {
+    //     src: ['{.tmp,<%= yeoman.app %>}/assets/css/**/*.css']
+    //   }
+    // },
     // UseminPrepare will only scan one page for usemin blocks. If you have
     // usemin blocks that aren't used in index.html, create a usemin manifest
     // page (hackery!) and point this task there.
@@ -410,9 +410,9 @@ grunt.loadNpmTasks('grunt-contrib-less');
     'clean:server',
     'less:server',
     'coffee:server',
-    'jshint:report',
-    'csscss:report',
-    'csslint:report'
+    //'jshint:report',
+    'csscss:report'
+    //'csslint:report'
   ]);
 
   grunt.registerTask('build', [
