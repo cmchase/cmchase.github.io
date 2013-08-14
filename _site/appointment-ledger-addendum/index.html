@@ -1,0 +1,5 @@
+<p>Not 18 hours after posting about <a href="/the-appointment-ledger-smells-funny/">a weird code smell</a>, we found a better solution to using NotificationCenter: exclusiveTouch. Actually, by &quot;we&quot; I mean &quot;John&quot;, the principal software developer I&#39;m working with for our lane application.</p>
+
+<p>Setting exclusiveTouch to YES within the child controller for the buttons navigationController.navigationBar totally did the trick. We still have to use the NotificationCenter elsewhere, but John&#39;s solution is much cleaner.</p>
+
+<p>Thanks, John, at least you&#39;re not a jerk about being right all the time.</p>

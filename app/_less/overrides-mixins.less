@@ -1,0 +1,250 @@
+/*@import "../_bower_components/bootstrap/less/mixins.less";*/
+
+#gradient {
+	.vertical-alpha(@start-color: #555; @start-alpha: 0; @start-percent: 0%; @end-color: #333; @end-alpha: 1; @end-percent: 100%) {
+		background-color: transparent !important;
+	    @start-alpha-color: hsla(hue(@start-color), saturation(@start-color), lightness(@start-color), 0);
+	    @end-alpha-color: hsla(hue(@end-color), saturation(@end-color), lightness(@end-color), @end-alpha);
+	    #gradient .vertical(@start-alpha-color; @start-percent; @end-alpha-color; @end-percent);
+	}
+
+	.vertical-three-colors-alpha(@start-color: #00b3ee; @start-alpha: 1; @mid-color: #7a43b6; @mid-alpha: 1; @color-stop: 50%; @end-color: #0026ff; @end-alpha: 1) {
+		background-color: transparent !important;
+	    @start-alpha-color: hsla(hue(@start-color), saturation(@start-color), lightness(@start-color), @start-alpha);
+	    @mid-alpha-color: hsla(hue(@mid-color), saturation(@mid-color), lightness(@mid-color), @mid-alpha);
+	    @end-alpha-color: hsla(hue(@end-color), saturation(@end-color), lightness(@end-color), @end-alpha);
+	    #gradient .vertical-three-colors(@start-alpha-color, @mid-alpha-color, @color-stop, @end-alpha-color);
+	}
+}
+
+.blur(@amount: 3px) {
+	filter:url(/assets/img/filters.svg#blur3);
+	-webkit-filter: blur(@amount); 
+	-moz-filter: blur(@amount); 
+	-o-filter: blur(@amount); 
+	-ms-filter: blur(@amount); 
+	filter: blur(@amount);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+.branding-wide(){
+	top: 25px;
+	&:hover, &:active {
+		cursor: pointer;
+		top: 35px;
+	}
+}
+.internal-links-wide(){
+	top: 200px;
+}
+.social-links-wide() {
+	left: auto;
+	right: 10%;
+}
+.caption-wide(){
+	bottom: 0px;
+}
+.cover-wide(){
+	border-right: none;
+	border-bottom: 1px solid @cover-fg-color;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.cover-mixin() {
+	background-color: @cover-bg-color;
+	border-right: 1px solid @cover-fg-color;
+	height: 100%;
+	position: fixed;
+	overflow: hidden;
+	top: 0; left: 0;
+	width: 30%;
+	& .background {
+		background-size: cover;
+		background-position: center;
+		border-right: 1px solid @cover-fg-color;
+		box-shadow: inset -3px 0 0 @cover-bg-color;
+		position: absolute;
+		overflow: hidden; float: left;
+		top: 0; right: 0; bottom: 0; left: 0;
+		width: 100%;
+		z-index: 10;
+		.blur(3px);
+	}
+	& .content {
+		color: @cover-fg-color;
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		z-index: 100;
+		& .branding {
+			font-size: 3.5em;
+			left: 5%;
+			position: absolute;
+			top: 200px;
+			z-index: 200;
+			width: 7em;
+			.transition(~"font-size .25s, top .5s");
+			h1 {
+				font-size: 100%;
+				left: @cover-logo-size + 10;
+				line-height: .75em;
+				margin: -0.25em 0 0 0;
+				position: absolute;
+				top: @cover-logo-size / 2.35; 
+			}
+			h2 {
+				font-size: @font-size-base - 1;
+				line-height: 1;
+				left: 0;
+				right: 0;
+				width: 100%;
+				margin: 0;
+				bottom: 0;
+				position: absolute;
+			}
+			.logo {
+				border-radius: 5px;
+				.size(@cover-logo-size, @cover-logo-size);
+				.logo-overlay {
+					fill: @cover-fg-color;
+				}
+				.logo-underlay {
+					fill: @cover-fg-color;
+					opacity: .5;
+				}
+			}
+			&:hover, &:active {
+				cursor: pointer;
+				top: 210px;
+			}
+			@media(max-width: 1000px) {
+				.branding-wide();
+			}
+		}
+		.internal-links {
+			font-family: @font-family-sans-serif;
+			left: 5%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 375px;
+			li {
+				display: inline;
+				a {
+					border: 1px solid @cover-fg-color;
+					border-radius: 5px;
+					color: @cover-fg-color;
+					margin: 5px;
+					padding: 5px;
+					.transition(all .25s);
+					&:hover{
+						background-color: @cover-bg-color;
+						border-color: @cover-bg-color;
+						color: @cover-fg-color;
+					}
+				}
+			}
+			@media(max-width: 1000px) {
+				.internal-links-wide();
+			}
+		}
+		.social-links {
+			font-family: @font-family-sans-serif;
+			left: 5%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 310;
+			li {
+				display: inline-block;
+				height: 40px;
+				overflow: hidden;
+				width: 40px;
+				path {
+					fill: @cover-fg-color;
+				}
+				.logo {
+					display: block;
+					.size(100%,100%);
+				}
+				&.codepen:hover {
+					background-color: #2d2d2f;
+				}
+				&.dribbble:hover {
+					background-color: #cb3f73;
+				}
+				&.github:hover {
+					background-color: #000;
+				}
+				&.linkedin:hover {
+					background-color: #1178b3;
+				}
+				&.twitter:hover {
+					background-color: #01acee;
+				}
+			}
+			@media(max-width: 1000px) {
+				.social-links-wide();
+			}
+		}
+		.caption {
+			bottom: 25px;
+			color: @cover-fg-color;
+			font-size: 1.1em;
+			font-style: italic;
+			margin-left: 10px;
+			position: absolute;
+			text-align: right;
+			right: 25px;
+			@media(max-width: 1000px) {
+				.caption-wide();
+			}
+		}
+	}
+	@media(max-width: 1000px) {
+		.cover-wide();
+	}
+}
+
+.post-time() {
+	time {
+		background-color: transparent;
+		border: 1px solid #333;
+		border-radius: 5px;
+		color: #333;
+		display: inline-block;
+		font-family: @font-family-sans-serif;
+		line-height: 1em;
+		left: 5px;
+		position: absolute;
+		overflow: hidden;
+		text-align: center;
+		top: 10px;
+		.size(50px, 50px);
+		.day {
+			display: block;
+			font-size: 1.5em;
+			letter-spacing: -2px;
+			position: absolute;
+			top: 18px; right: 0; left: -2px;
+		}
+		.month {
+			background-color: #333;
+			color: #fff;
+			display: block;
+			font-size: 1em;
+			line-height: 1em;
+			top: 0; right: 0; left: -2px;
+			position: absolute;
+		}
+		.year {
+			display: block;
+			font-size: .9em;
+			line-height: 1em;
+			position: absolute;
+			right: 0; bottom: -1px; left: 0; 
+		}	
+	}		
+}

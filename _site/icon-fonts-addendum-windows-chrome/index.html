@@ -1,0 +1,12 @@
+<p>In <a href="/icon-fonts-eff-yeah/">a previous post</a> I mentioned that I ran into an aliasing issue with Chrome on Windows while using a custom font I generated using IcoMoon. A search lead me to a <a href="http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363">stackoverflow answer</a> that included:</p>
+
+<blockquote>
+<p>@media screen and (-webkit-min-device-pixel-ratio:0) {
+   @font-face {
+       font-family: &#39;fontName&#39;;
+       src: url(&#39;fonts/fontFile.svg#fontName&#39;) format(&#39;svg&#39;);
+   }
+}</p>
+</blockquote>
+
+<p>Incidentally, this same answer is referred to from a <a href="http://icomoon.io/#post/318">post on IcoMoon</a>. This fix probably won&#39;t been needed for long, but it helped me out with the font pixelation.</p>

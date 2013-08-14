@@ -1,0 +1,30 @@
+@import "../_bower_components/bootstrap/less/variables.less";
+@import "overrides-variables.less";
+@import "../_bower_components/bootstrap/less/mixins.less";
+@import "overrides-mixins.less";
+@import "../_bower_components/bootstrap/less/normalize.less";
+@import "overrides-normalize.less";
+@import "../_bower_components/bootstrap/less/scaffolding.less";
+
+// Links
+// -------------------------
+
+a {
+  	font-weight: bold;
+  	border-bottom: 1px solid lighten(@link-color, 50%);
+}
+a:hover,
+a:focus {
+	border-bottom: none;
+  	color: @link-hover-color;
+  	text-decoration: none;
+  	text-shadow: 0 0 1px light(@link-hover-color, 25%);
+}
+a:focus {
+  .tab-focus();
+}
+h1, h2, h3, h4, h5, h6 {
+	a {
+		border-bottom: none;
+	}
+}

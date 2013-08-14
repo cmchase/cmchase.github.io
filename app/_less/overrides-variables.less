@@ -1,0 +1,64 @@
+/* Overrides ../_bower_components/bootstrap/less/variables.less */
+@import "../_bower_components/bootstrap/less/variables.less";
+
+
+// Grays
+// -------------------------
+
+// @gray-darker:            lighten(#000, 13.5%); // #222
+// @gray-dark:              lighten(#000, 20%);   // #333
+// @gray:                   lighten(#000, 33.5%); // #555
+// @gray-light:             lighten(#000, 60%);   // #999
+// @gray-lighter:           lighten(#000, 93.5%); // #eee
+
+// Brand colors
+// -------------------------
+
+@brand-primary:         @gray-dark;
+// @brand-success:         #5cb85c;
+// @brand-warning:         #f0ad4e;
+// @brand-danger:          #d9534f;
+// @brand-info:            #5bc0de;
+
+// Scaffolding
+// -------------------------
+
+@body-bg:               #f2f2f2;
+//@text-color:            @gray-dark;
+
+// Links
+// -------------------------
+
+@link-color:            @brand-primary;
+@link-hover-color:      darken(@link-color, 25%);
+
+// Typography
+// -------------------------
+body {
+    font: normal 125%/1.4 @font-family-base;
+    text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased; 
+	font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'akg-m-web';
+    src: url('/assets/fonts/akg-m-web.eot');
+    src: url('/assets/fonts/akg-m-web.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/akg-m-web.ttf') format('truetype'),
+         url('/assets/fonts/akg-m-web.svg#ag-web') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-family-sans-serif:	"akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+@font-family-serif:			Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+
+@font-family-base:			@font-family-serif;
+@headings-font-family:		@font-family-sans-serif;
+
+@font-size-base:          	16px;
+
+.btn {
+	font-family: @font-family-sans-serif;
+}
