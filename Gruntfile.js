@@ -35,18 +35,20 @@ grunt.loadNpmTasks('grunt-contrib-less');
         files: ['<%= yeoman.app %>/_less/**/*.less'],
         tasks: ['less:server']
       },
-      // coffee: {
-      //   files: ['<%= yeoman.app %>/_src/**/*.coffee'],
-      //   tasks: ['coffee:server']
-      // },
-      // coffeeTest: {
-      //   files: ['test/spec/**/*.coffee'],
-      //   tasks: ['coffee:test']
-      // },
+      coffee: {
+        files: ['<%= yeoman.app %>/_src/**/*.coffee'],
+        tasks: ['coffee:server']
+      },
+      coffeeTest: {
+        files: ['test/spec/**/*.coffee'],
+        tasks: ['coffee:test']
+      },
       jekyll: {
         files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
                 '_config.yml',
-                '!<%= yeoman.app %>/_bower_components'],
+                '!<%= yeoman.app %>/_bower_components',
+                '!**/node_modules/**',
+                '!**/_gh_pages/**'],
         tasks: ['jekyll:server']
       },
       livereload: {
