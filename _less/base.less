@@ -37,12 +37,10 @@
 
 .writing {
 	.cover {
-		@media (min-width: 1000px) {
 			@cover-bg-color: #fff;
-			@cover-fg-color: #7fa6a5;
+			@cover-fg-color: #8eb6c7;
 			@cover-logo-size: 120px;
 			.cover-mixin();
-		}
 	}
 }
 .about {
@@ -64,6 +62,10 @@
 	@media (max-width: 1000px) {
 		.main-content-wide();
 	}
+	@media(max-width: 600px) {
+		.main-content-wide();
+		width: 100%;
+	}
 	.all-posts {
 		&.posts {
 			article {
@@ -77,33 +79,21 @@
 		article {
 			background-color: @body-bg;
 			border: 1px solid transparent;
-			padding: 5px 5px 5px 65px;
+			padding: 5px;
 			position: relative;
 			&.post-link {
 				float: left;
-				height: 80px;
+				height: 60px;
 				margin: 10px;
 				overflow: hidden;
 				.transition(all .25s);
-				// &::after {
-				// 	content: "";
-				// 	height: 1em;
-				// 	position: absolute;
-				// 	background-color: transparent;
-				// 	left: 0; right: 0; bottom: 0;
-	  	// 			#gradient .vertical-alpha(@body-bg; 0; 0%; @body-bg; 1; 100%);
-				// }
 				.post-title {
 					font-size: 1.4em;
 					line-height: 1.2em;
 				}
 				&:hover, 
 				&:active {
-					// @_hover-bg: #e8e8e8;
-					// border-color: #ccc;
-					// background-color: @_hover-bg;
 					cursor: pointer;
-	  		// 		#gradient .vertical-alpha(@_hover-bg; 0; 0%; @_hover-bg; 1; 100%);
 	  				box-shadow: -4px 0 0 #333;
 	  				left: 10px;
 				}
@@ -116,10 +106,18 @@
 				&.full {
 					width: 100%;
 				}
+				.time {
+					top: 10px;
+				}
 			}
 			.post-title {
 				margin-top: -1px;
 				line-height: 1em;
+				padding-left: 60px;
+				min-height: 50px;
+				@media(max-width: 600px) {
+					font-size: 1.6em;
+				}
 			}
 			.post-time();
 		}
@@ -129,7 +127,10 @@
 		.post-time();
 		.post-title {
 			min-height: 2em;
-			padding-left: 75px;
+			padding-left: 60px;
+			@media(max-width: 600px) {
+				font-size: 1.6em;
+			}
 		}
 	}
 }

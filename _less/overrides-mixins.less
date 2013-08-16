@@ -26,16 +26,59 @@
 	filter: blur(@amount);
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
-.branding-wide(){
-	top: 25px;
+.branding-mixin(@font-size: 3.5em) {
+	font-size: @font-size;
+	left: 5%;
+	position: absolute;
+	top: 200px;
+	z-index: 200;
+	width: 7em;
+	.transition(~"font-size .25s, top .5s");
+	h1 {
+		font-size: 100%;
+		left: @cover-logo-size + 10;
+		line-height: .75em;
+		margin: -0.25em 0 0 0;
+		position: absolute;
+		top: @cover-logo-size / 2.35; 
+	}
+	h2 {
+		font-size: @font-size-base - 1;
+		line-height: 1;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin: 0;
+		bottom: 0;
+		position: absolute;
+	}
+	.logo {
+		border-radius: 5px;
+		.size(@cover-logo-size, @cover-logo-size);
+		.logo-overlay {
+			fill: @cover-fg-color;
+		}
+		.logo-underlay {
+			fill: @cover-fg-color;
+			opacity: .5;
+		}
+	}
 	&:hover, &:active {
 		cursor: pointer;
-		top: 35px;
+		top: 210px;
+	}
+	@media(max-width: 1000px) {
+		.branding-wide();
 	}
 }
-.internal-links-wide(){
-	top: 200px;
+.branding-wide(){
+	top: 50px;
+	&:hover, &:active {
+		cursor: pointer;
+		top: 60px;
+	}
 }
+
 .social-links-wide() {
 	left: auto;
 	right: 10%;
@@ -43,10 +86,11 @@
 .caption-wide(){
 	bottom: 0px;
 }
+
 .cover-wide(){
 	border-right: none;
 	border-bottom: 1px solid @cover-fg-color;
-	height: 300px;
+	height: 325px;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
@@ -66,10 +110,12 @@
 		box-shadow: inset -3px 0 0 @cover-bg-color;
 		position: absolute;
 		overflow: hidden; float: left;
-		top: 0; right: 0; bottom: 0; left: 0;
-		width: 100%;
+		top:	-10px;
+		right:	-10px;
+		bottom:	-10px;
+		left:	-10px;
 		z-index: 10;
-		.blur(3px);
+		//.blur(3px);
 	}
 	& .content {
 		color: @cover-fg-color;
@@ -77,48 +123,10 @@
 		top: 0; right: 0; bottom: 0; left: 0;
 		z-index: 100;
 		& .branding {
-			font-size: 3.5em;
-			left: 5%;
-			position: absolute;
-			top: 200px;
-			z-index: 200;
-			width: 7em;
-			.transition(~"font-size .25s, top .5s");
-			h1 {
-				font-size: 100%;
-				left: @cover-logo-size + 10;
-				line-height: .75em;
-				margin: -0.25em 0 0 0;
-				position: absolute;
-				top: @cover-logo-size / 2.35; 
-			}
-			h2 {
-				font-size: @font-size-base - 1;
-				line-height: 1;
-				left: 0;
-				right: 0;
-				width: 100%;
-				margin: 0;
-				bottom: 0;
-				position: absolute;
-			}
-			.logo {
-				border-radius: 5px;
-				.size(@cover-logo-size, @cover-logo-size);
-				.logo-overlay {
-					fill: @cover-fg-color;
-				}
-				.logo-underlay {
-					fill: @cover-fg-color;
-					opacity: .5;
-				}
-			}
-			&:hover, &:active {
-				cursor: pointer;
-				top: 210px;
-			}
-			@media(max-width: 1000px) {
-				.branding-wide();
+			.branding-mixin();
+			@media(max-width: 600px) {
+				@cover-logo-size: 50px;
+				.branding-mixin(3em);
 			}
 		}
 		.internal-links {
@@ -147,7 +155,10 @@
 				}
 			}
 			@media(max-width: 1000px) {
-				.internal-links-wide();
+				top: 225px;
+			}
+			@media(max-width: 600px) {
+				top: 140px;
 			}
 		}
 		.social-links {
@@ -171,19 +182,32 @@
 					.size(100%,100%);
 				}
 				&.codepen:hover {
-					background-color: #2d2d2f;
+					path {
+						fill: #2d2d2f;
+					}
 				}
 				&.dribbble:hover {
-					background-color: #cb3f73;
+					path {
+						fill: #cb3f73;
+					}
 				}
 				&.github:hover {
-					background-color: #000;
+					path {
+						fill: #000;
+					}
 				}
 				&.linkedin:hover {
-					background-color: #1178b3;
+					path {
+						fill: #1178b3;
+					}
 				}
 				&.twitter:hover {
-					background-color: #01acee;
+					path {
+						fill: #01acee;
+					}
+				}
+				&:hover{
+					background-color: #fff;
 				}
 			}
 			@media(max-width: 1000px) {
@@ -222,7 +246,7 @@
 		position: absolute;
 		overflow: hidden;
 		text-align: center;
-		top: 10px;
+		top: 3px;
 		.size(50px, 50px);
 		.day {
 			display: block;
@@ -246,6 +270,6 @@
 			line-height: 1em;
 			position: absolute;
 			right: 0; bottom: -1px; left: 0; 
-		}	
+		}
 	}		
 }
