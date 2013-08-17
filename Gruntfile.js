@@ -76,6 +76,7 @@ grunt.loadNpmTasks('grunt-contrib-less');
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, '.jekyll'),
+              mountFolder(connect, './'),
               mountFolder(connect, yeomanConfig.app)
             ];
           }
@@ -115,44 +116,13 @@ grunt.loadNpmTasks('grunt-contrib-less');
           src: [
             '.tmp',
             '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
+            '!<%= yeoman.dist %>/.git*',
+            '_gh_pages/*'
           ]
         }]
       },
       server: ['.tmp', '.jekyll']
     },
-    // sass: {
-    //   options: {
-    //     bundleExec: true,
-    //     debugInfo: false,
-    //     lineNumbers: false,
-    //     loadPath: 'app/_bower_components'
-    //   },
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= yeoman.app %>/_less',
-    //       src: '**/*.{scss,sass}',
-    //       dest: '.tmp/assets/css',
-    //       filter: 'isFile',
-    //       ext: '.css'
-    //     }]
-    //   },
-    //   server: {
-    //     options: {
-    //       debugInfo: true,
-    //       lineNumbers: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= yeoman.app %>/_less',
-    //       src: '**/*.{scss,sass}',
-    //       dest: '.tmp/assets/css',
-    //       filter: 'isFile',
-    //       ext: '.css'
-    //     }]
-    //   }
-    // },
     less: {
       server: {
         options: {
@@ -225,22 +195,6 @@ grunt.loadNpmTasks('grunt-contrib-less');
         }
       }
     },
-    // jshint: {
-    //   options: {
-    //     jshintrc: '.jshintrc'
-    //   },
-    //   all: [
-    //     'Gruntfile.js',
-    //     '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
-    //     'test/spec/**/*.js',
-    //     '!<%= yeoman.app %>/assets/js/vendor/**/*',
-    //     '!<%= yeoman.app %>/_bower_components/**/*'
-    //   ],
-    //   report: [
-    //     '{.tmp,<%= yeoman.app %>}/assets/js/**/*.js',
-    //     '!<%= yeoman.app %>/assets/js/vendor/**/*'
-    //   ]
-    // },
     csscss: {
       options: {
         bundleExec: true,
@@ -256,17 +210,6 @@ grunt.loadNpmTasks('grunt-contrib-less');
              '<%= yeoman.app %>/_less/**/*.scss']
       }
     },
-    // csslint: {
-    //   options: {
-    //     csslintrc: '.csslintrc'
-    //   },
-    //   report: {
-    //     src: ['{.tmp,<%= yeoman.app %>}/assets/css/**/*.css']
-    //   }
-    // },
-    // UseminPrepare will only scan one page for usemin blocks. If you have
-    // usemin blocks that aren't used in index.html, create a usemin manifest
-    // page (hackery!) and point this task there.
     useminPrepare: {
       options: {
         dest: '<%= yeoman.dist %>'

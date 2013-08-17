@@ -53,7 +53,7 @@
 {% endif %}
 
 {% unless page.background %}
-    {% assign bg = "/assets/img/covers/panama-construction.jpg" %}
+    {% assign bg-class = "no-bg" %}
 {% endunless %}
 
 {% if page.caption %}
@@ -61,7 +61,7 @@
 {% endif %}
 
 {% unless page.caption or page.background %}
-    {% assign caption = "The Panama Canal, 1907" %}
+    {% assign caption-class = "no-caption" %}
 {% endunless %}
 
   <body class="{{ page.class }}">
@@ -70,7 +70,7 @@
     <![endif]-->
 
     <aside class="cover">
-        <div class="background" style="background-image: url({{ bg }})"></div>
+        <div class="background {{ bg-class }}" style="background-image: url({{ bg }})"></div>
 
         <div class="content">
             {% include branding.html %}
@@ -86,7 +86,7 @@
                 </li>-->
             </ul>
             {% include links-social.html %}
-            <p class="caption">{{ caption }}</caption>
+            <p class="caption {{ caption-class }}">{{ caption }}</caption>
         </div>
     </aside>
 

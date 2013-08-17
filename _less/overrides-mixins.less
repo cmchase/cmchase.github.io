@@ -30,7 +30,7 @@
 	font-size: @font-size;
 	left: 5%;
 	position: absolute;
-	top: 200px;
+	top: 100px;
 	z-index: 200;
 	width: 7em;
 	.transition(~"font-size .25s, top .5s");
@@ -65,7 +65,7 @@
 	}
 	&:hover, &:active {
 		cursor: pointer;
-		top: 210px;
+		top: 110px;
 	}
 	@media(max-width: 1000px) {
 		.branding-wide();
@@ -116,6 +116,9 @@
 		left:	-10px;
 		z-index: 10;
 		//.blur(3px);
+		@media(max-width: 600px) {
+			bottom: -100px;
+		}
 	}
 	& .content {
 		color: @cover-fg-color;
@@ -136,7 +139,7 @@
 			margin: 0;
 			padding: 0;
 			position: absolute;
-			top: 375px;
+			top: 275px;
 			li {
 				display: inline;
 				a {
