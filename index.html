@@ -16,6 +16,7 @@ class: "home"
 		        <h1 class="post-title">{{ post.title }}</h1>
 		        {{ post.content }}
 		    </article>
+		    <hr>
 		    <h2>
 		    	<a href="/writing/" class="all-posts">More Posts &raquo;</a>
 			</h2>
@@ -31,6 +32,7 @@ class: "home"
 	    {% endif %}
 	{% endfor %}
 </section>
-
-<section style="clear: both;">
+<hr>
+<section class="footer">
+	<p>Made with Jekyll, Bootstrap, LESS, Grunt and a smattering of CoffeScript. Hosted on GitHub.</p>
 </section>

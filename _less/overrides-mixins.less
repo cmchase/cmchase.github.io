@@ -8,6 +8,14 @@
 	    #gradient .vertical(@start-alpha-color; @start-percent; @end-alpha-color; @end-percent);
 	}
 
+	.horizontal-three-colors-alpha(@start-color: #00b3ee; @start-alpha: 1; @mid-color: #7a43b6; @mid-alpha: 1; @color-stop: 50%; @end-color: #c3325f; @end-alpha: 1;) {
+		background-color: transparent !important;
+		@start-alpha-color: hsla(hue(@start-color), saturation(@start-color), lightness(@start-color), @start-alpha);
+		@mid-alpha-color: hsla(hue(@mid-color), saturation(@mid-color), lightness(@mid-color), @mid-alpha);
+		@end-alpha-color: hsla(hue(@end-color), saturation(@end-color), lightness(@end-color), @end-alpha);
+		#gradient .horizontal-three-colors(@start-alpha-color, @mid-alpha-color, @color-stop, @end-alpha-color);
+	}
+
 	.vertical-three-colors-alpha(@start-color: #00b3ee; @start-alpha: 1; @mid-color: #7a43b6; @mid-alpha: 1; @color-stop: 50%; @end-color: #0026ff; @end-alpha: 1) {
 		background-color: transparent !important;
 	    @start-alpha-color: hsla(hue(@start-color), saturation(@start-color), lightness(@start-color), @start-alpha);
