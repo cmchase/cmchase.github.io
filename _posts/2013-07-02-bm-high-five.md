@@ -1,5 +1,4 @@
 ---
-date: 2013-07-02 22:25:52+00:00
 layout: post
 slug: bm-high-five
 title: BM? High-five!

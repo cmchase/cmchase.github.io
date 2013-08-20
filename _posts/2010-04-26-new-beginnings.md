@@ -1,5 +1,4 @@
 ---
-date: 2010-04-26 01:14:09+00:00
 layout: post
 slug: new-beginnings
 title: New Beginnings

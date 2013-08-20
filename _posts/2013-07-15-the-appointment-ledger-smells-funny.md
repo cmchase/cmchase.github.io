@@ -1,11 +1,12 @@
 ---
-date: 2013-07-15 01:26:46+00:00
 layout: post
 slug: the-appointment-ledger-smells-funny
 title: The Appointment Ledger Smells Funny
 categories:
 - Code
 - Works
+cover: "/assets/img/covers/old-spice.jpg"
+class: "blurry-cover"
 ---
 
 I recently posted about how [my brain leaks out all the Objective-C I know](/ios-brain-leak/) if I go too long without using it, which is barely an exaggeration,  so I made some time in my day this past Friday to clear out a last-minute bug. In that same post, I mentioned how I fell in love with NSNotificationCenter, which I used to try to handle a bug where the UI gets all wonky if the the user taps the VIN Search button while the user had focus on the SearchBar. (I'm simply disabling the VIN Search button until the SearchBar resigns first responder.)

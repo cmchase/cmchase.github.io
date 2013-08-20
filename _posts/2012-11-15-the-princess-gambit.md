@@ -1,5 +1,4 @@
 ---
-date: 2012-11-15 01:53:54+00:00
 layout: post
 slug: the-princess-gambit
 title: The Princess Gambit

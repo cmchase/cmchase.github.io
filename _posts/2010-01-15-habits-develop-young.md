@@ -1,5 +1,4 @@
 ---
-date: 2010-01-15 01:59:49+00:00
 layout: post
 slug: habits-develop-young
 title: Habits Develop Young

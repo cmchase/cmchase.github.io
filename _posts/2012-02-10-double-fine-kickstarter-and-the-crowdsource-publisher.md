@@ -1,11 +1,12 @@
 ---
-date: 2012-02-10 01:40:00+00:00
 layout: post
 slug: double-fine-kickstarter-and-the-crowdsource-publisher
 title: Double Fine, Kickstarter & Crowd-source Publishing
 categories:
 - Entertainment
 - General Banter
+cover: "/assets/img/covers/doublefine.jpg"
+class: "blurry-cover"
 ---
 
 I firmly believe that history was made today.

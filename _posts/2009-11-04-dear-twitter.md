@@ -1,6 +1,4 @@
 ---
-
-date: 2009-11-04
 layout: post
 slug: dear-twitter
 title: Dear Twitter
@@ -11,7 +9,8 @@ tags:
 - Facebook
 - Login
 - Twitter
-background: "/assets/img/2009/11/twitter-login04.jpg"
+cover: "/assets/img/2009/11/twitter-login04.jpg"
+class: "blurry-cover"
 ---
 
 What's happening to us? Did I do something wrong? You've always been interested in others, but I used to feel so welcomed when I showed up.

@@ -1,12 +1,13 @@
 ---
-date: 2012-03-12 02:27:42+00:00
 layout: post
 slug: podcasting
-title: 'Reductio ad Podcasting '
+title: 'Reductio ad Podcasting'
 categories:
 - Entertainment
 - General Banter
 - Tips &amp; Advice
+cover: "/assets/img/covers/podcasting.jpg"
+class: "inverse blurry-cover"
 ---
 
 My pal Dean is a smart guy.

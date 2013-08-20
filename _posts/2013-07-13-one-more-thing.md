@@ -1,5 +1,4 @@
 ---
-date: 2013-07-13 02:34:08+00:00
 layout: post
 slug: one-more-thing
 title: One More Thing...

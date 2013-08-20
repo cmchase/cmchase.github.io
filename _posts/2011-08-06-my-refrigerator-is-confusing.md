@@ -1,5 +1,4 @@
 ---
-date: 2011-08-06 17:56:00+00:00
 layout: post
 slug: my-refrigerator-is-confusing
 title: My Refrigerator is Confusing
@@ -7,7 +6,8 @@ categories:
 - Customer Experience
 - Design
 - User Experience
-background: "/assets/img/2011/08/fridge-interior.png"
+cover: "/assets/img/2011/08/fridge-interior.png"
+
 ---
 
 Last year my wife and I bought a new fridge. It's big, it's black and it holds a lot of food -- it was everything we needed. It's a single-door bottom-freezer unit and we're very happy with it, especially when we remember what it replaced, but there's something that's been driving me crazy about it since the day it arrived...

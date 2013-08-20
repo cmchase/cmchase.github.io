@@ -1,5 +1,4 @@
 ---
-date: 2012-10-26 18:19:41+00:00
 layout: post
 slug: visual-cowbells
 title: Visual Cowbells

@@ -1,13 +1,11 @@
 ---
-date: 2010-03-09 00:41:32+00:00
 layout: post
 slug: valve-adds-steam-mac-support
 title: Valve Adds Steam Mac Support
 categories:
 - Code
 - Entertainment
-background: "/assets/img/2010/03/03andimapc.jpg"
-class: "inverse"
+cover: "/assets/img/covers/valve-mac.jpg"
 ---
 
 Earlier today, [Valve announced](http://store.steampowered.com/news/3569/) that its Steam publishing platform will support the Mac this Spring and I'm crazy-excited. With this, a large number of games based on the Source Engine will also be available on the Mac. (Yay, Portal!) I'm no news guys, but both [Joystiq](http://www.joystiq.com/2010/03/08/valve-confirms-mac-support-for-steam-and-source-engine/) and [Kotaku](http://kotaku.com/5488375/left-4-dead-2-team-fortress-2-portal-and-steam-coming-to-mac-in-april) have a lot of great info.

@@ -1,12 +1,12 @@
 ---
-date: 2009-11-03
 layout: post
 title: Dear Past Me, Don't Get Lazy
 categories:
 - Tips &amp; Advice
 tags:
 - Dear Past Me
-background: "/assets/2009/11/time-150x150.jpg"
+cover: "/assets/img/2009/11/time-150x150.jpg"
+class: "blurry-cover"
 caption: "Michio Kaku says 'hi'"
 ---
 

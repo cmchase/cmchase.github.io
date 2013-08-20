@@ -1,5 +1,4 @@
 ---
-date: 2013-06-29 01:54:58+00:00
 layout: post
 slug: icon-fonts-eff-yeah
 title: Icon Fonts? Eff Yeah!

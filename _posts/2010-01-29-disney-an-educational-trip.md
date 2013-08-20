@@ -1,12 +1,12 @@
 ---
-date: 2010-01-29 02:12:11+00:00
 layout: post
 slug: disney-an-educational-trip
 title: 'Disney: An Educational Trip'
 categories:
 - Entertainment
 - General Banter
-background: "/assets/img/2010/01/mickey.jpg"
+cover: "/assets/img/2010/01/mickey.jpg"
+class: "blurry-cover"
 ---
 
 My wife and I had a great time during our recent Disney getaway. It's the first time we've ever really "vacationed" during our 8 years together. (We even skipped a honeymoon!) Epcot was a disappointment, being that there's nothing to do there but eat once you move past Future World, but we really loved our stay at the POP Resort and our visits to Downtown Disney.

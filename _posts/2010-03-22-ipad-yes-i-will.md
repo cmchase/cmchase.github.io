@@ -1,8 +1,9 @@
 ---
-date: 2010-03-22 23:44:22+00:00
 layout: post
 slug: ipad-yes-i-will
 title: 'iPad: Yes, I will.'
+cover: "/assets/img/covers/data-pad.jpg"
+class: "blurry-cover"
 ---
 
 Today I learned that [Amazon and Barnes & Noble will be launching apps to support the iPad as an e-book reader](http://arstechnica.com/apple/news/2010/03/amazon-and-barnes-noble-plan-to-ride-the-ipad-e-book-train.ars). I've been secretly wanting an iPad (read: I haven't been bugging my wife yet), but this news puts me over the edge – now I _really_ want an iPad.

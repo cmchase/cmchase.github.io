@@ -1,11 +1,11 @@
 ---
-date: 2011-04-26 05:00:12+00:00
 layout: post
 slug: getting-back-on-the-horse
 title: Getting Back on the Horse
 categories:
 - General Banter
-background: "/assets/img/2011/04/anniversary.jpg"
+cover: "/assets/img/2011/04/anniversary.jpg"
+class: "blurry-cover"
 ---
 
 Today marks my 1-year anniversary with Loop and I feel like I've learned a lot, some of which I'll eventually write about. There have been a number of changes in my life, with more on the way, and I finally feel ready to (cautiously) jump back into my social media dabblings.

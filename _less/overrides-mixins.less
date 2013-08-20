@@ -105,7 +105,7 @@
 }
 .cover-mixin() {
 	background-color: @cover-bg-color;
-	border-right: 1px solid @cover-fg-color;
+	border-right: 1px solid @cover-bg-color;
 	height: 100%;
 	position: fixed;
 	overflow: hidden;
@@ -114,18 +114,24 @@
 	& .background {
 		background-size: cover;
 		background-position: center;
-		border-right: 1px solid @cover-fg-color;
-		box-shadow: inset -3px 0 0 @cover-bg-color;
+		//border-right: 1px solid @cover-fg-color;
 		position: absolute;
 		overflow: hidden; float: left;
-		top:	-10px;
-		right:	-10px;
-		bottom:	-10px;
-		left:	-10px;
+		top:	0px;
+		right:	0px;
+		bottom:	0px;
+		left:	0px;
 		z-index: 10;
-		//.blur(3px);
-		@media(max-width: 600px) {
-			bottom: -100px;
+		.blurry-cover & {
+			top:	-10px;
+			right:	-10px;
+			bottom:	-10px;
+			left:	-10px;
+			.blur(3px);
+		}
+		@media(max-width: 1000px) {
+			background-size: 100%;
+			background-position: right center;
 		}
 	}
 	& .content {

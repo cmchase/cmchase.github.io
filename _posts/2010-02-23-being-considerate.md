@@ -1,5 +1,4 @@
 ---
-date: 2010-02-23 23:11:56+00:00
 layout: post
 slug: being-considerate
 title: Being Considerate

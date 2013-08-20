@@ -1,5 +1,4 @@
 ---
-date: 2009-12-03 04:34:47+00:00
 layout: post
 slug: overlooked-gift-that-keeps-on-giving
 title: Overlooked Gift That Keeps on Giving
@@ -7,7 +6,8 @@ categories:
 - Design
 - Entertainment
 - Works
-background: "/assets/img/2009/12/bad-mojo-logo-full.png"
+cover: "/assets/img/2009/12/bad-mojo-logo-full.png"
+class: "blurry-cover"
 ---
 
 Years ago I played World of Warcraft quite a bit --  back when I had considerably more free time. I've long stopped playing, but I still look back on it fondly. It was rarely the game itself that held my attention -- it was the people and social aspects that kept me coming back so often (as most [MMO](http://en.wikipedia.org/wiki/Massively_multiplayer_online_game) players would agree).

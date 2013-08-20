@@ -1,5 +1,4 @@
 ---
-date: 2009-11-17 00:55:51+00:00
 layout: post
 slug: patting-yourself-on-the-back
 title: Don't break your arm patting yourself on the back
@@ -7,8 +6,8 @@ categories:
 - Code
 - Design
 - Works
-background: "/assets/img/2009/11/player.gif"
-class: "inverse"
+cover: "/assets/img/2009/11/player.gif"
+class: "blurry-cover inverse"
 ---
 
 One of the very first things I learned about working in web design is that you have to find your own gratification. The boss can only pat you on the head so often and you'd better not hold your breath waiting for every client to recognize how awesome you are. I won't say that I crank out award-winning web sites left and right. (It just wouldn't be honest and awards are rarely lauded on small-budget sites.) However, I will say that I do my best to take pride in what I do. Surprisingly, this can require some effort.

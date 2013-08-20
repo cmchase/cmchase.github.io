@@ -1,5 +1,4 @@
 ---
-date: 2012-05-22 22:15:49+00:00
 layout: post
 slug: mobile-phones-rock
 title: Mobile Phones Rock

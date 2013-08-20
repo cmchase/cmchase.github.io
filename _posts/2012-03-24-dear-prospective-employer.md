@@ -1,5 +1,4 @@
 ---
-date: 2012-03-24 02:38:41+00:00
 layout: post
 slug: dear-prospective-employer
 title: Dear Prospective Employer

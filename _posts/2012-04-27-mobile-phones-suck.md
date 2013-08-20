@@ -1,5 +1,4 @@
 ---
-date: 2012-04-27 02:48:24+00:00
 layout: post
 slug: mobile-phones-suck
 title: Mobile Phones Suck

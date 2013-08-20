@@ -1,5 +1,4 @@
 ---
-date: 2012-05-12 12:35:10+00:00
 layout: post
 slug: wrong-moment-lost-passion
 title: Wrong Moment, Lost Passion

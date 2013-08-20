@@ -1,5 +1,4 @@
 ---
-date: 2009-11-30 23:12:00+00:00
 layout: post
 slug: dear-past-me-your-stuff-sucks
 title: Dear Past Me, Your Stuff Sucks
@@ -7,7 +6,7 @@ categories:
 - Tips &amp; Advice
 tags:
 - Dear Past Me
-background: "/assets/img/2009/11/yousuck.jpg"
+cover: "/assets/img/2009/11/yousuck.jpg"
 caption: "Don't take personally"
 ---
 

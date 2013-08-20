@@ -1,5 +1,4 @@
 ---
-date: 2011-05-25 00:26:46+00:00
 layout: post
 slug: godaddy-loves-minotaurs
 title: GoDaddy Loves Minotaurs
@@ -7,6 +6,7 @@ categories:
 - Customer Experience
 - Design
 - User Experience
+cover: "/assets/img/covers/minotaur.jpg"
 ---
 
 I recently had to renew the domain name for this site. Like many, I just go through GoDaddy because, well... I don't know why. I never gave it any thought before, but I doubt I'll ever do it again. The following day I just mentioned the renewal to my friend Mark at the office -- I didn't even go into details before his ranting response inspired the title for this post:

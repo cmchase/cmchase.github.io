@@ -1,13 +1,12 @@
 ---
-date: 2010-01-08 02:04:09+00:00
 layout: post
 slug: it-takes-a-village
 title: It Takes A Village
 categories:
 - General Banter
 - Reading
-background: "/assets/img/2010/01/blinders.jpg"
-class: "inverse"
+cover: "/assets/img/2010/01/blinders.jpg"
+class: "inverse blurry-cover"
 ---
 
 I work for a small company, so my daily interactions are really limited. Of the handful of people in our office, I'm the only one with interests in design concepts, user experience, improved coding, social media and... well... what I'd call a _better_ internet.

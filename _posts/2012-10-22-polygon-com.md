@@ -1,5 +1,4 @@
 ---
-date: 2012-10-22 12:58:12+00:00
 layout: post
 slug: polygon-com
 title: Polygon.com

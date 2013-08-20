@@ -1,12 +1,11 @@
 ---
-date: 2012-04-10 03:01:15+00:00
 layout: post
 slug: cory-chase-porn-star
 title: 'Cory Chase: Porn Star'
 categories:
 - Entertainment
 - General Banter
-background: "/assets/img/2012/04/cory-handlebar.png"
+cover: "/assets/img/covers/pornstar.jpg"
 caption: "Toby Sherwood: motorcycle stuntman by day, international spy by night."
 ---
 

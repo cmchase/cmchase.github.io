@@ -1,5 +1,4 @@
 ---
-date: 2011-08-01 00:44:37+00:00
 layout: post
 slug: the-marketers-are-invading
 title: The Marketers Are Invading

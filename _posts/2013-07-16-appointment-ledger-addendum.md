@@ -1,5 +1,4 @@
 ---
-date: 2013-07-16 00:09:02+00:00
 layout: post
 slug: appointment-ledger-addendum
 title: 'Appointment Ledger: Addendum'

@@ -1,5 +1,4 @@
 ---
-date: 2009-12-27 21:44:16+00:00
 layout: post
 slug: consumption-roundup-1220-1226
 title: 'Consumption Roundup: 12/20 - 12/26'

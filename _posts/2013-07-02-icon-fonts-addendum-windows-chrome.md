@@ -1,5 +1,4 @@
 ---
-date: 2013-07-02 00:33:07+00:00
 layout: post
 slug: icon-fonts-addendum-windows-chrome
 title: 'Icon Fonts Addendum: Windows Chrome'

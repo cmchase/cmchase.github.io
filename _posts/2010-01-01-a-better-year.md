@@ -1,5 +1,4 @@
 ---
-date: 2010-01-01 17:08:01+00:00
 layout: post
 slug: a-better-year
 title: A Better Year

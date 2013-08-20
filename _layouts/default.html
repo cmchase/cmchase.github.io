@@ -48,12 +48,12 @@
 */
     </style>
   </head>
-{% if page.background %}
-    {% assign bg = page.background %}
+{% if page.cover %}
+    {% assign cover = page.cover %}
 {% endif %}
 
-{% unless page.background %}
-    {% assign bg-class = "no-bg" %}
+{% unless page.cover %}
+    {% assign cover-class = "no-cover" %}
 {% endunless %}
 
 {% if page.caption %}
@@ -70,7 +70,7 @@
     <![endif]-->
 
     <aside class="cover">
-        <div class="background {{ bg-class }}" style="background-image: url({{ bg }})"></div>
+        <div class="background {{ cover-class }}" style="background-image: url({{ cover }})"></div>
 
         <div class="content">
             {% include branding.html %}
@@ -92,11 +92,11 @@
 
     <main class="main-content">
         {{ content }}
+        <footer class="main-footer">
+            <p>Made with <a href="http://jekyllrb.com/">Jekyll</a>; hosted on <a href="https://github.com/cmchase/cmchase.github.io">GitHub</a>.</p>
+        </footer>
     </main>
-    
-    <section class="footer">
-        <p>Made with Jekyll, hosted on GitHub.</p>
-    </section>
+
     {% include scripts.html %}
     {% include googleanalytics.html %}
 

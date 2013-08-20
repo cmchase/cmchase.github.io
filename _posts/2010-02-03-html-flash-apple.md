@@ -1,12 +1,11 @@
 ---
-date: 2010-02-03 03:31:29+00:00
 layout: post
 slug: html-flash-apple
 title: HTML 5, Flash and Apple
 categories:
 - Code
 - General Banter
-background: "/assets/img/2010/02/fingers_crossed.jpg"
+cover: "/assets/img/2010/02/fingers_crossed.jpg"
 ---
 
 My pal Dean, a BFF if I've ever had one, sent me a couple of (rhetorical) questions the other day:

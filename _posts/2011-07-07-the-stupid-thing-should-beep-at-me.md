@@ -1,11 +1,12 @@
 ---
-date: 2011-07-07 00:43:25+00:00
 layout: post
 slug: the-stupid-thing-should-beep-at-me
 title: The Stupid Thing Should Beep At Me
 categories:
 - Reading
 - User Experience
+cover: "/assets/img/covers/roadrunner.jpg"
+class: "blurry-cover"
 ---
 
 A few weeks ago I finished reading _[Designing with the Mind in Mind](http://www.amazon.com/Designing-Mind-Simple-Understanding-Interface/dp/012375030X)_ by Jeff Johnson, which was a great book that I'd highly recommend to anyone interested in the psychology of design. One of my favorite sections was in Chapter 8, "**Limits on Attention, Shape, Thought and Action**", was about primary goals and cleanup steps.

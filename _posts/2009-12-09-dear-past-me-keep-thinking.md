@@ -1,5 +1,4 @@
 ---
-date: 2009-12-09 01:21:24+00:00
 layout: post
 slug: dear-past-me-keep-thinking
 title: Dear Past Me, Keep Thinking
@@ -7,8 +6,9 @@ categories:
 - Tips &amp; Advice
 tags:
 - Dear Past Me
-background: "/assets/img/2009/12/cake.jpg"
+cover: "/assets/img/2009/12/cake.jpg"
 caption: "There's no saving face with some mistakes"
+class: "blurry-cover"
 ---
 
 We all wish we knew then what we know now. What would you say to yourself at the start of your current career? "[Dear Past Me](http://www.corychase.com/tag/dear-past-me/)" is a series of posts where I explore just that.

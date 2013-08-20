@@ -1,5 +1,4 @@
 ---
-date: 2013-07-10 02:24:35+00:00
 layout: post
 slug: ios-brain-leak
 title: iOS Brain Leak

@@ -1,5 +1,4 @@
 ---
-date: 2012-07-03 01:48:43+00:00
 layout: post
 slug: first-time-for-everything
 title: First Time for Everything

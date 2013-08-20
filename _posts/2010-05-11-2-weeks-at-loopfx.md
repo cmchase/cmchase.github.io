@@ -1,11 +1,10 @@
 ---
-date: 2010-05-11 00:22:19+00:00
 layout: post
 slug: 2-weeks-at-loopfx
 title: 2 Weeks at LoopFX
 categories:
 - General Banter
-background: "/assets/img/2010/05/loop.jpg"
+cover: "/assets/img/2010/05/loop.jpg"
 caption: "Hawaiian Shirt Day"
 ---
 

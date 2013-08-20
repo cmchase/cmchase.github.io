@@ -1,6 +1,4 @@
 ---
-
-date: 2009-11-11 03:39:17+00:00
 layout: post
 slug: dear-past-me-dont-hate
 title: Dear Past Me, Don't Hate
@@ -9,8 +7,9 @@ categories:
 tags:
 - Clients
 - Dear Past Me
-background: "/assets/img/2009/11/flying_purple_people_eater-150x150.jpg"
+cover: "/assets/img/2009/11/flying_purple_people_eater-150x150.jpg"
 caption: "One-horned, one-eyed flying purple compromise."
+class: "blurry-cover"
 ---
 
 It's been a week since to you/myself 7 years in the past and time hasn't folded in on itself in some weird paradoxical, so I guess it's safe for me to do it again and I'm sure you have a lot of questions about the future:

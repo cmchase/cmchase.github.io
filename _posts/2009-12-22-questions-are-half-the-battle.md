@@ -1,12 +1,11 @@
 ---
-date: 2009-12-22 05:33:08+00:00
 layout: post
 slug: questions-are-half-the-battle
 title: Questions Are Half the Battle
 categories:
 - Customer Experience
 - General Banter
-background: "/assets/img/2009/12/lorenzo-lamas.jpg"
+cover: "/assets/img/2009/12/lorenzo-lamas.jpg"
 caption: "Lorenzo Fucking Lamas"
 ---
 

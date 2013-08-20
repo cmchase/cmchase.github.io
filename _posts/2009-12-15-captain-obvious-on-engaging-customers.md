@@ -1,5 +1,4 @@
 ---
-date: 2009-12-15 23:00:55+00:00
 layout: post
 slug: captain-obvious-on-engaging-customers
 title: Captain Obvious on Engaging Customers
@@ -7,7 +6,7 @@ categories:
 - Copy &amp; Text
 - Customer Experience
 - General Banter
-background: "/assets/img/2009/12/cat-ignore.jpg"
+cover: "/assets/img/2009/12/cat-ignore.jpg"
 ---
 
 I think one of the best ways to capture the interest of customers is to *gasp* _be interesting_. I know, it seems like a bunch of crap -- why would anyone want to _enjoy_ reading what a company has to say? What would we do with all the dry, faceless corporate text that's out there? (Probably the same thing we're doing now; ignoring it.)
