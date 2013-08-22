@@ -4,9 +4,42 @@ title: Cory Chase, St Petersburg/Tampa, FL Front-End Web Developer and Designer
 cover: "/assets/img/covers/driveway.jpg"
 class: "home"
 ---
+<section class="intro">
+
+	<div class="indents">
+		<span class="indent1"></span>
+		<span class="indent2"></span>
+		<span class="indent3"></span>
+		<span class="indent4"></span>
+		<span class="indent5"></span>
+		<span class="indent6"></span>
+		<span class="indent7"></span>
+		<span class="indent8"></span>
+		<span class="indent9"></span>
+	</div>
+
+	<h1>Hello.</h1>
+
+	<p>My name is <strong>Cory Chase</strong>. I'm a husband and father living in St Pete, FL.</p>
+
+	<p>I work as the Lead Web Developer at Loop Management, LLC where I manage a small team for the front-end development and user-interface design on a large web application.</p>
+
+	<p>I do a lot of interface and interaction design; low-fidelity work in Balsamiq with Photoshop for my high-fidelity stuff.</p>
+
+	<p>Most of my code work is in HTML, CSS, JavaScript and ASP.NET on C#. I've done a ton of work in PHP in the past, have had a good bit of exposure to Objective-C with our first iOS app release, and had a brief run-in with Rails.</p>
+
+	<p>My T-shaped skillset is pretty broad, but I wouldn't call myself a full-stack developer for fear of someone calling me out on my shitty data management skills.</p>
+
+	<img src="/assets/img/mugshot.jpg" class="mugshot">
+
+</section>
+
+<hr>
+
 <section class="posts">
 	{% for post in site.posts limit:5 %}
 		{% if forloop.index == 1 %}
+		<h2>Latest Post</h2>
 		    <article>
 		    	<time>
 			    	<span class="month">{{ post.date | date: '%b'}}</span>

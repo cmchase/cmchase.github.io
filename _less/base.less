@@ -59,7 +59,28 @@ hr {
 	.cover-mixin();
 	}
 }
-
+.home {
+	.cover {
+		@cover-bg-color: #333;
+		@cover-fg-color: #fff;
+		@cover-logo-size: 120px;
+		.cover-mixin();
+		.content {
+			.branding {
+				bottom: 100px;
+				top: auto;
+				&:hover{
+					bottom: 90px;
+					top: auto;
+				}
+			}
+			.internal-links {
+				bottom: 45px;
+				top: auto;
+			}
+		}
+	}
+}
 .writing {
 	.cover {
 			@cover-bg-color: #fff;
@@ -100,6 +121,60 @@ hr {
 				&.post-link {
 					height: 130px;
 				}
+			}
+		}
+	}
+	section {
+		clear: both;
+	}
+	.intro {
+		.indents {
+			position: relative;
+			span {
+				clear: both;
+				float: left;
+				height: 2em;
+			}
+		}
+		.indent1 {
+		}
+		.indent2 {
+		}
+		.indent3 {
+			width: 55px;
+		}
+		.indent4 {
+			width: 85px;
+		}
+		.indent5 {
+			width: 105px;
+		}
+		.indent6 {
+			width: 110px;
+		}
+		.indent7 {
+			width: 105px;
+		}
+		.indent8 {
+			width: 85px;
+		}
+		.indent9 {
+			width: 55px;
+		}
+		.mugshot {
+			position: absolute;
+			top: 115px;
+			left: -100px;
+			border-radius: 50%;
+			border: 5px solid @body-bg;
+			box-shadow: -2px 0 0 #666;
+			@media (max-width: 1000px) {
+				box-shadow: 1px 0 0 #666;
+				left: -75px;
+				top: 85px;
+			}
+			@media (max-width: 650px) {
+				left: -95px;
 			}
 		}
 	}
