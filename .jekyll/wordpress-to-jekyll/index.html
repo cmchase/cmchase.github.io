@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dear Past Me, Keep Thinking</title>
+    <title>WordPress to Jekyll Conversion</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -49,10 +49,6 @@
     </style>
   </head>
 
-    
-
-
-
 
 
     
@@ -60,13 +56,17 @@
 
 
 
-  <body class="blurry-cover">
+
+    
+
+
+  <body class="">
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
     <aside class="cover">
-        <div class="background " style="background-image: url(/assets/img/2009/12/cake.jpg)"></div>
+        <div class="background no-cover" style="background-image: url()"></div>
 
         <div class="content">
             <div class="branding" data-link="/">
@@ -923,33 +923,50 @@
 </svg>
 </a></li>
 </ul>
-            <p class="caption ">There's no saving face with some mistakes</caption>
+            <p class="caption no-caption"></caption>
         </div>
     </aside>
 
     <main class="main-content">
         <article class="post">
-	<h1 class="post-title">Dear Past Me, Keep Thinking</h1>
+	<h1 class="post-title">WordPress to Jekyll Conversion</h1>
 	<time>
-    	<span class="month">Dec</span>
-    	<span class="day">09</span>
-    	<span class="year">2009</span>
+    	<span class="month">Aug</span>
+    	<span class="day">26</span>
+    	<span class="year">2013</span>
 	</time>
-	<p>We all wish we knew then what we know now. What would you say to yourself at the start of your current career? &quot;<a href="http://www.corychase.com/tag/dear-past-me/">Dear Past Me</a>&quot; is a series of posts where I explore just that.</p>
+	<p>So, this is my first post since I converted my site from WordPress to Jekyll. It was a really good experience and I learned a lot from it.</p>
 
-<p>It&#39;s a sad thing, but there will be times when you&#39;re less appreciated for being thoughtful and creative than for being able to perform a task others can&#39;t. <a href="http://www.corychase.com/dear-past-me-dont-hate/">Accept it for what it is and let it go</a>. It&#39;s a part of working for someone else and it helps keep the lights on...</p>
+<p>I&#39;m not going to do a how-to, there are dozens of great articles and posts to be found, but I&#39;m going offer a few quick bullet points.</p>
 
-<h2>Just Don&#39;t Turn Off Your Brain</h2>
-
-<p>Sure, it&#39;s easier to get through mundane tasks when you&#39;re on autopilot: washing dishes, digging ditches and typing out 3 pages of faxed text because a client refuses to send an e-mail all come to mind. That&#39;s okay -- listen to some music or a podcast or whatever keeps you sane -- but if you stop thinking for yourself then you&#39;ll eventually run into problems.</p>
+<h2>What I used</h2>
 
 <ul>
-<li><p>Big knife fall into the sink? Stop washing and fish it out.</p></li>
-<li><p>Is the hole starting to smell like natural gas? Stop digging and put out that cigarette.</p></li>
-<li><p>Giant &#39;F-bomb scrawled across the page? Stop typing and contact that e-mail adverse client.</p></li>
+<li><strong>Yeoman</strong> to scaffold out my initial app.</li>
+<li><strong>Jekyll</strong> to actually generate the site.</li>
+<li><strong>A Python XML parser</strong> that took my a dump of my WP site&#39;s XML and converted the posts into Markdown.</li>
+<li><strong>Grunt.js</strong> for build automation. This was especially helpful for processing my LESS files quickly.</li>
+<li>A few parts of <strong>Bootstrap</strong>. I hate recreating the wheel if I don&#39;t have to.</li>
+<li><strong>GitHub</strong> for my hosting.</li>
 </ul>
 
-<p>We can&#39;t always be presented with interesting problems and we won&#39;t always be learning new things, but firing a few extra synapses will keep you from making stupid mistakes and looking like a jackass.</p>
+<h2>Pros</h2>
+
+<ul>
+<li><strong>IAWriter</strong> is a pretty sweet writing app and now I&#39;ve got a good reason to use it.</li>
+<li><strong>No more hosting</strong>. Between Dropbox and GitHub, it really doesn&#39;t make sense for me to pay a provider, even a really cheap one.</li>
+<li><strong>Easier to template</strong>. WordPress isn&#39;t rocket science, but it&#39;s still a hassle to work with. The mistake I made with my last WP template was that I worked really hard to make it flexible and easy to create variations on, but went on to do absolutely nothing with it.</li>
+<li><strong>No security concerns</strong>. Even though I didn&#39;t use a lot of the features that come with WordPress, plugins and commenting to name two, it was still just a matter of time before my site got hacked. I count myself lucky that it never happened, WP is a solid solution, but you know, it&#39;s the internet.</li>
+<li><strong>Built-in versioning</strong>. It seems stupid, but I really like that I don&#39;t have to do anything extra for version control. This site is hosted on GitHub, so that&#39;s inherently taken care of.</li>
+</ul>
+
+<h2>Cons</h2>
+
+<ul>
+<li>Meh. I don&#39;t know, I guess I feel obligated to come up with a Con, but I still haven&#39;t figured out a good way to write something with my iPad. I&#39;d rather not script something to watch a Dropbox folder and push to GitHub from my home system, but that seems to be the solution others are using.</li>
+</ul>
+
+<p>One major Pro I left for last, is that I feel okay with the progress on this site being iterative now. I&#39;ve committed a ton of small changes in the design since it completely replaced my old site. FTP always felt like a huge chore, a big last step, but pushing to a repo for small, incremental changes feels natural.</p>
 
 </article>
 
@@ -958,28 +975,17 @@
 <nav class="post-navigation posts"> 
 	<h2>More Reading</h2>
      
-        <article class="post-link half" data-link="/overlooked-gift-that-keeps-on-giving">
+        <article class="post-link half" data-link="/appointment-ledger-addendum">
             <time>
-                <span class="month">Dec</span>
-                <span class="day">03</span>
-                <span class="year">2009</span>
+                <span class="month">Jul</span>
+                <span class="day">16</span>
+                <span class="year">2013</span>
             </time>
-            <h3 class="post-title">Overlooked Gift That Keeps on Giving</h3>
-            <a href="/captain-obvious-on-engaging-customers" title="next Post: 
-Captain Obvious on Engaging Customers" class="pull-right">Captain Obvious on Engaging Customers &raquo; </a> 
+            <h3 class="post-title">Appointment Ledger: Addendum</h3>
+            <a href="" title="next Post: 
+" class="pull-right"> &raquo; </a> 
         </article>
      
-             
-        <article class="post-link half" data-link="/captain-obvious-on-engaging-customers">
-            <time>
-                <span class="month">Dec</span>
-                <span class="day">15</span>
-                <span class="year">2009</span>
-            </time>
-            <h3 class="post-title">Captain Obvious on Engaging Customers</h3>
-            <a href="/captain-obvious-on-engaging-customers" title="next Post: 
-Captain Obvious on Engaging Customers" class="pull-right">Captain Obvious on Engaging Customers &raquo; </a> 
-        </article>
      
 </nav> 
 
