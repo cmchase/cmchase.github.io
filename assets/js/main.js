@@ -6,9 +6,10 @@
     };
     num = getRandomInt(1, 9);
     $(".background.no-cover").css("background-image", "url(/assets/img/covers/cover-" + num + ".jpg)");
-    $("article.post-link").on("click", function() {
+    $(".post-link, .panel-link").on("click", function() {
       return window.location = $(this).data("link");
     });
+    $(".data-link").hide();
     return $(".branding").on("click", function() {
       return window.location = $(this).data("link");
     });
