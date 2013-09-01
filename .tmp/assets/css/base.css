@@ -2502,6 +2502,9 @@ hr::after {
     width: 100%;
   }
 }
+.works .details {
+  display: none;
+}
 .works .cover {
   background-color: #333333;
   border-right: 1px solid #333333;
