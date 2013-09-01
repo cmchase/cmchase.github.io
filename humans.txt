@@ -12,7 +12,8 @@
 # TECHNOLOGY COLOPHON
 
     Jekyll static site generator
-    Sass 
+    LESS 
+    Bootstrap
     Coffeescript 
     HTML5 ★ Boilerplate 
     Normalize.css 

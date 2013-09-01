@@ -13,40 +13,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="/assets/css/base.css">
-    <style>
-/*       .cover {
-/*           border-color: #f00; /*//@cover-fg-color;*/
-/*           background-color: #f00;/*//@cover-bg-color;*/
-/*       }
-/*       .cover .background {
-/*           box-shadow-color: #f00;/*//@cover-bg-color;*/
-/*       }
-/*       .cover .content {
-/*           color: #000;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .branding .logo .logo-overlay,
-/*       .cover .content .branding .logo .logo-underlay {
-/*           fill: #0f0;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .internal-links li a {
-/*           border-color: blue;/*//@cover-fg-color;*/
-/*           color: purple;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .internal-links li a:hover {
-/*           background-color: blue;/*//@cover-bg-color;*/
-/*           border-color: green;/*//@cover-bg-color;*/
-/*           color: yellow;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .social-links li {
-/*           path {
-/*               fill: red;/*//@cover-fg-color;*/
-/*           }
-/*       }
-/*       .cover .caption {
-/*           color: blue;/*//@cover-fg-color;*/
-/*       }
-*/
-    </style>
   </head>
 {% if page.cover %}
     {% assign cover = page.cover %}
@@ -65,8 +31,8 @@
 {% endunless %}
 
   <body class="{{ page.class }}">
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <!--[if lt IE 8]>
+        <p>I'm very sorry kind visitor, but I haven't done much to make this site work well in older versions of Internet Explorer. It's not that I'm incapable, I'm just dreadfully unmotivated.</p>
     <![endif]-->
 
     <aside class="cover">
@@ -81,9 +47,9 @@
                 <li>
                     <a href="/writing/">Writing</a>
                 </li>
-                <!--<li>
+                <li>
                     <a href="/works/">Works</a>
-                </li>-->
+                </li>
             </ul>
             {% include links-social.html %}
             <p class="caption {{ caption-class }}">{{ caption }}</caption>

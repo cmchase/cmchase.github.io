@@ -5,9 +5,10 @@ $ ->
 	num = getRandomInt(1,9)
 	$(".background.no-cover").css("background-image", "url(/assets/img/covers/cover-#{ num }.jpg)")
 
-	$("article.post-link").on("click", ->
+	$(".post-link, .panel-link").on("click", ->
 		window.location = $(this).data("link");
 	)
+	$(".data-link").hide();
 	$(".branding").on("click", ->
 		window.location = $(this).data("link");
 	)

@@ -2,67 +2,62 @@
 layout: default
 title: Cory Chase, St Petersburg/Tampa, FL Front-End Web Developer and Designer
 cover: "/assets/img/covers/driveway.jpg"
-class: "home"
+class: "home blurry-cover"
 ---
-<section class="intro">
+<div class="panels">
+	{% for post in site.posts limit:1 %}
+	<section class="panel-latest-post panel-link" data-link="{{ post.url }}">
+		<article class="post">
+			<time>
+		    	<span class="month">{{ post.date | date: '%b'}}</span>
+		    	<span class="day">{{ post.date | date: '%d'}}</span>
+		    	<span class="year">{{ post.date | date: '%Y'}}</span>
+	    	</time>
+	        <header><h1 class="post-title">{{ post.title }}</h1></header>
+	        {{ post.content }}
 
-	<div class="indents">
-		<span class="indent1"></span>
-		<span class="indent2"></span>
-		<span class="indent3"></span>
-		<span class="indent4"></span>
-		<span class="indent5"></span>
-		<span class="indent6"></span>
-		<span class="indent7"></span>
-		<span class="indent8"></span>
-		<span class="indent9"></span>
-	</div>
-
-	<h1>Hello.</h1>
-
-	<p>My name is <strong>Cory Chase</strong>. I'm a husband and father living in St Pete, FL.</p>
-
-	<p>I work as the Lead Web Developer at Loop Management, LLC where I manage a small team for the front-end development and user-interface design on a large web application.</p>
-
-	<p>I do a lot of interface and interaction design; low-fidelity work in Balsamiq with Photoshop for my high-fidelity stuff.</p>
-
-	<p>Most of my code work is in HTML, CSS, JavaScript and ASP.NET on C#. I've done a ton of work in PHP in the past, have had a good bit of exposure to Objective-C with our first iOS app release, and had a brief run-in with Rails.</p>
-
-	<p>My T-shaped skillset is pretty broad, but I wouldn't call myself a full-stack developer for fear of someone calling me out on my shitty data management skills.</p>
-
-	<img src="/assets/img/mugshot.jpg" class="mugshot">
-
-</section>
-
-<hr>
-
-<section class="posts">
-	{% for post in site.posts limit:5 %}
-		{% if forloop.index == 1 %}
-		<h2>Latest Post</h2>
-		    <article>
-		    	<time>
-			    	<span class="month">{{ post.date | date: '%b'}}</span>
-			    	<span class="day">{{ post.date | date: '%d'}}</span>
-			    	<span class="year">{{ post.date | date: '%Y'}}</span>
-		    	</time>
-		        <h1 class="post-title">{{ post.title }}</h1>
-		        {{ post.content }}
-		    </article>
-		    <hr>
-		    <h2>
-		    	<a href="/writing/" class="all-posts">More Posts &raquo;</a>
-			</h2>
-	    {% else %}
-		    <article class="post-link half" data-link="{{ post.url }}">
-		    	<time>
-			    	<span class="month">{{ post.date | date: '%b'}}</span>
-			    	<span class="day">{{ post.date | date: '%d'}}</span>
-			    	<span class="year">{{ post.date | date: '%Y'}}</span>
-		    	</time>
-		        <h3 class="post-title">{{ post.title }}</h3>
-		    </article>
-	    {% endif %}
+	    	<a href="{{ post.url }}" class="data-link">View Post</a>
+		</article>
+    	<span class="readmore"></span>
+	</section>
 	{% endfor %}
-</section>
-<hr>
+
+	<section class="panel-about panel-link" data-link="/about/">
+		<div class="background"></div>
+		<div class="overlay">
+			<span class="notch"></span>
+			<header><h2>About Me</h2></header>
+			<p>I work as the Lead Web Dev for a software company in Clearwater, FL, and I manage a small team for the front-end development and user-interface design on a large web app.</p>
+	    	<span class="readmore"></span>
+		</div>
+    	<a href="/about/" class="data-link">About Me</a>
+	</section>
+
+	<section class="panel-works panel-link" data-link="/works/">
+		<div class="background"></div>
+		<div class="overlay">
+			<span class="notch"></span>
+			<header><h2>Works</h2></header>
+			<p>I primarily work in ASP.NET Web Forms, C#, JavaScript, jQuery, HTML and CSS. I have insight on the programming side of things, but my strengths really lie in the front-end.</p>
+	    	<span class="readmore"></span>
+		</div>
+
+    	<a href="/works/" class="data-link">See what I do</a>
+	</section>
+
+	<section class="panel-posts posts">
+	<h2 class="hidden-lg">More Posts</h2>
+	{% for post in site.posts limit:6 offset:1 %}	
+		<article class="post post-link half" data-link="{{ post.url }}">
+			<time>
+		    	<span class="month">{{ post.date | date: '%b'}}</span>
+		    	<span class="day">{{ post.date | date: '%d'}}</span>
+		    	<span class="year">{{ post.date | date: '%Y'}}</span>
+	    	</time>
+	        <h3 class="post-title">{{ post.title }}</h3>
+
+    		<a href="{{ post.url }}" class="data-link">View Post</a>
+		</article>
+	{% endfor %}
+	</section>
+</div>

@@ -13,40 +13,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="/assets/css/base.css">
-    <style>
-/*       .cover {
-/*           border-color: #f00; /*//@cover-fg-color;*/
-/*           background-color: #f00;/*//@cover-bg-color;*/
-/*       }
-/*       .cover .background {
-/*           box-shadow-color: #f00;/*//@cover-bg-color;*/
-/*       }
-/*       .cover .content {
-/*           color: #000;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .branding .logo .logo-overlay,
-/*       .cover .content .branding .logo .logo-underlay {
-/*           fill: #0f0;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .internal-links li a {
-/*           border-color: blue;/*//@cover-fg-color;*/
-/*           color: purple;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .internal-links li a:hover {
-/*           background-color: blue;/*//@cover-bg-color;*/
-/*           border-color: green;/*//@cover-bg-color;*/
-/*           color: yellow;/*//@cover-fg-color;*/
-/*       }
-/*       .cover .content .social-links li {
-/*           path {
-/*               fill: red;/*//@cover-fg-color;*/
-/*           }
-/*       }
-/*       .cover .caption {
-/*           color: blue;/*//@cover-fg-color;*/
-/*       }
-*/
-    </style>
   </head>
 
     
@@ -60,9 +26,9 @@
     
 
 
-  <body class="home">
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <body class="home blurry-cover">
+    <!--[if lt IE 8]>
+        <p>I'm very sorry kind visitor, but I haven't done much to make this site work well in older versions of Internet Explorer. It's not that I'm incapable, I'm just dreadfully unmotivated.</p>
     <![endif]-->
 
     <aside class="cover">
@@ -98,9 +64,9 @@
                 <li>
                     <a href="/writing/">Writing</a>
                 </li>
-                <!--<li>
+                <li>
                     <a href="/works/">Works</a>
-                </li>-->
+                </li>
             </ul>
             <ul class="social-links">
   <li class="codepen"><a href="http://codepen.io/cmchase" target="_blank"><svg version="1.1" id="All" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo"
@@ -928,50 +894,17 @@
     </aside>
 
     <main class="main-content">
-        <section class="intro">
-
-	<div class="indents">
-		<span class="indent1"></span>
-		<span class="indent2"></span>
-		<span class="indent3"></span>
-		<span class="indent4"></span>
-		<span class="indent5"></span>
-		<span class="indent6"></span>
-		<span class="indent7"></span>
-		<span class="indent8"></span>
-		<span class="indent9"></span>
-	</div>
-
-	<h1>Hello.</h1>
-
-	<p>My name is <strong>Cory Chase</strong>. I'm a husband and father living in St Pete, FL.</p>
-
-	<p>I work as the Lead Web Developer at Loop Management, LLC where I manage a small team for the front-end development and user-interface design on a large web application.</p>
-
-	<p>I do a lot of interface and interaction design; low-fidelity work in Balsamiq with Photoshop for my high-fidelity stuff.</p>
-
-	<p>Most of my code work is in HTML, CSS, JavaScript and ASP.NET on C#. I've done a ton of work in PHP in the past, have had a good bit of exposure to Objective-C with our first iOS app release, and had a brief run-in with Rails.</p>
-
-	<p>My T-shaped skillset is pretty broad, but I wouldn't call myself a full-stack developer for fear of someone calling me out on my shitty data management skills.</p>
-
-	<img src="/assets/img/mugshot.jpg" class="mugshot">
-
-</section>
-
-<hr>
-
-<section class="posts">
+        <div class="panels">
 	
-		
-		<h2>Latest Post</h2>
-		    <article>
-		    	<time>
-			    	<span class="month">Aug</span>
-			    	<span class="day">26</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h1 class="post-title">WordPress to Jekyll Conversion</h1>
-		        <p>So, this is my first post since I converted my site from WordPress to Jekyll. It was a really good experience and I learned a lot from it.</p>
+	<section class="panel-latest-post panel-link" data-link="/wordpress-to-jekyll">
+		<article class="post">
+			<time>
+		    	<span class="month">Aug</span>
+		    	<span class="day">26</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <header><h1 class="post-title">WordPress to Jekyll Conversion</h1></header>
+	        <p>So, this is my first post since I converted my site from WordPress to Jekyll. It was a really good experience and I learned a lot from it.</p>
 
 <p>I&#39;m not going to do a how-to, there are dozens of great articles and posts to be found, but I&#39;m going offer a few quick bullet points.</p>
 
@@ -1004,59 +937,108 @@
 
 <p>One major Pro I left for last, is that I feel okay with the progress on this site being iterative now. I&#39;ve committed a ton of small changes in the design since it completely replaced my old site. FTP always felt like a huge chore, a big last step, but pushing to a repo for small, incremental changes feels natural.</p>
 
-		    </article>
-		    <hr>
-		    <h2>
-		    	<a href="/writing/" class="all-posts">More Posts &raquo;</a>
-			</h2>
-	    
+
+	    	<a href="/wordpress-to-jekyll" class="data-link">View Post</a>
+		</article>
+    	<span class="readmore"></span>
+	</section>
 	
+
+	<section class="panel-about panel-link" data-link="/about/">
+		<div class="background"></div>
+		<div class="overlay">
+			<span class="notch"></span>
+			<header><h2>About Me</h2></header>
+			<p>I work as the Lead Web Dev for a software company in Clearwater, FL, and I manage a small team for the front-end development and user-interface design on a large web app.</p>
+	    	<span class="readmore"></span>
+		</div>
+    	<a href="/about/" class="data-link">About Me</a>
+	</section>
+
+	<section class="panel-works panel-link" data-link="/works/">
+		<div class="background"></div>
+		<div class="overlay">
+			<span class="notch"></span>
+			<header><h2>Works</h2></header>
+			<p>I primarily work in ASP.NET Web Forms, C#, JavaScript, jQuery, HTML and CSS. I have insight on the programming side of things, but my strengths really lie in the front-end.</p>
+	    	<span class="readmore"></span>
+		</div>
+
+    	<a href="/works/" class="data-link">See what I do</a>
+	</section>
+
+	<section class="panel-posts posts">
+	<h2 class="hidden-lg">More Posts</h2>
 		
-		    <article class="post-link half" data-link="/appointment-ledger-addendum">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">16</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">Appointment Ledger: Addendum</h3>
-		    </article>
-	    
-	
+		<article class="post post-link half" data-link="/appointment-ledger-addendum">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">16</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">Appointment Ledger: Addendum</h3>
+
+    		<a href="/appointment-ledger-addendum" class="data-link">View Post</a>
+		</article>
 		
-		    <article class="post-link half" data-link="/the-appointment-ledger-smells-funny">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">15</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">The Appointment Ledger Smells Funny</h3>
-		    </article>
-	    
-	
+		<article class="post post-link half" data-link="/the-appointment-ledger-smells-funny">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">15</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">The Appointment Ledger Smells Funny</h3>
+
+    		<a href="/the-appointment-ledger-smells-funny" class="data-link">View Post</a>
+		</article>
 		
-		    <article class="post-link half" data-link="/one-more-thing">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">13</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">One More Thing...</h3>
-		    </article>
-	    
-	
+		<article class="post post-link half" data-link="/one-more-thing">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">13</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">One More Thing...</h3>
+
+    		<a href="/one-more-thing" class="data-link">View Post</a>
+		</article>
 		
-		    <article class="post-link half" data-link="/ios-brain-leak">
-		    	<time>
-			    	<span class="month">Jul</span>
-			    	<span class="day">10</span>
-			    	<span class="year">2013</span>
-		    	</time>
-		        <h3 class="post-title">iOS Brain Leak</h3>
-		    </article>
-	    
+		<article class="post post-link half" data-link="/ios-brain-leak">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">10</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">iOS Brain Leak</h3>
+
+    		<a href="/ios-brain-leak" class="data-link">View Post</a>
+		</article>
+		
+		<article class="post post-link half" data-link="/icon-fonts-addendum-windows-chrome">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">02</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">Icon Fonts Addendum: Windows Chrome</h3>
+
+    		<a href="/icon-fonts-addendum-windows-chrome" class="data-link">View Post</a>
+		</article>
+		
+		<article class="post post-link half" data-link="/bm-high-five">
+			<time>
+		    	<span class="month">Jul</span>
+		    	<span class="day">02</span>
+		    	<span class="year">2013</span>
+	    	</time>
+	        <h3 class="post-title">BM? High-five!</h3>
+
+    		<a href="/bm-high-five" class="data-link">View Post</a>
+		</article>
 	
-</section>
-<hr>
+	</section>
+</div>
+
         <footer class="main-footer">
             <p>Made with <a href="http://jekyllrb.com/">Jekyll</a>; hosted on <a href="https://github.com/cmchase/cmchase.github.io">GitHub</a>.</p>
         </footer>

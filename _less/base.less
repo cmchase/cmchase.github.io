@@ -10,6 +10,8 @@
 @import "overrides-type.less";
 @import "../_bower_components/bootstrap/less/buttons.less";
 @import "../_bower_components/bootstrap/less/utilities.less";
+@import "../_bower_components/bootstrap/less/responsive-utilities.less";
+
 
 hr {
 	border: 0;
@@ -44,13 +46,6 @@ hr {
 	.cover-mixin();
 }
 
-.main-content-wide(){
-	position: relative;
-	left: 0;
-	padding: 0 5% 5%;
-	width: 90%;
-}
-
 .inverse {
 	.cover {
 	@cover-bg-color: #fff;
@@ -59,24 +54,465 @@ hr {
 	.cover-mixin();
 	}
 }
+
 .home {
 	.cover {
 		@cover-bg-color: #333;
 		@cover-fg-color: #fff;
 		@cover-logo-size: 120px;
 		.cover-mixin();
-		.content {
-			.branding {
-				bottom: 100px;
-				top: auto;
-				&:hover{
-					bottom: 90px;
-					top: auto;
+		.cover-wide();
+		height: 400px;
+	}
+	.main-content {
+		.main-content-panels();
+		section {
+			&.panel-latest-post {
+				border-left: 1px solid @text-color;
+				.transition(border-left .25s);
+				width: 45%;
+				.post {
+					h1.post-title {
+						margin-top: 0;
+					}				
+				}
+				&:hover {
+					border-left: 5px solid #333;
+				}
+				@media(max-width: 1000px) {
+					width: 56%;
+				}
+				@media(max-width: 600px) {
+					height: auto;
+					max-height: 600px;
+					width: 100%;
 				}
 			}
-			.internal-links {
-				bottom: 45px;
-				top: auto;
+			&.panel-about {
+				width: 25%;
+				.background {
+					background-image: url(/assets/img/covers/mugshot.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					left: auto;
+					width: 50%;
+					.notch {
+						&::before {
+							.notch-mixin-on-left(@text-color, 1px, 50px);
+						}
+						&::after {
+							.notch-mixin-on-left(@body-bg, 0, 50px);
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						width: 52%;
+					}
+				}
+				@media(max-width: 1000px) {
+					width: 44%;
+				}
+				@media(max-width: 600px) {
+					width: 100%;
+					.background { background-size: 100% auto; }
+				}
+			}
+			&.panel-works {
+				float: right;
+				height: 500px;
+				width: 30%;
+				.background {
+					background-image: url(/assets/img/covers/clockwork.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					height: 150px;
+					top: auto;
+					.notch {
+						&::before {
+							.notch-mixin-on-top(@text-color, 1px);
+						}
+						&::after {
+							.notch-mixin-on-top;
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						height: 160px;
+					}
+				}
+				@media(max-width: 1000px) {
+					height: 200px;
+					width: 100%;
+					.overlay {
+						height: auto;
+						top: -1px;
+						right: auto;
+						width: 50%;
+						.notch {
+							&::before {
+								.notch-mixin-on-right(@text-color, 1px, 25px);
+							}
+							&::after {
+								.notch-mixin-on-right(@body-bg, 0, 25px);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: auto;
+							width: 52%;
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					height: 200px;
+					.overlay {
+						width: 60%;
+					}
+					&:hover {
+						.overlay {
+							width: 62%;
+						}
+					}
+				}
+			}
+			&.panel-posts {
+				border-left: 1px solid @text-color;
+				width: 70%;
+				@media(max-width: 1000px) {
+					height: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.works {
+	.cover {
+		@cover-bg-color: #333;
+		@cover-fg-color: #fff;
+		@cover-logo-size: 120px;
+		.cover-mixin();
+		.cover-wide();
+		height: 400px;
+	}
+	.main-content {
+		.main-content-panels();
+		section {
+			&.panel-intro {
+				border-left: 1px solid @text-color;
+				width: 50%;
+				@media(max-width: 1000px) {
+					height: auto;
+					width: 100%;
+				}
+			}
+			&.panel-wireframing {
+				width: 30%;
+				.background {
+					background-image: url(/assets/img/covers/mugshot.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					left: auto;
+					width: 40%;
+					.notch {
+						&::before {
+							.notch-mixin-on-left(@text-color, 1px, 0);
+						}
+						&::after {
+							.notch-mixin-on-left(@body-bg, 0, 0);
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						width: 42%;
+					}
+				}
+				@media(max-width: 1000px) {
+					width: 65%;
+					.overlay {
+						height: auto;
+						left: auto;
+						top: -1px;
+						width: 35%;
+						.notch {
+							&::before {
+								.notch-mixin-on-left(@text-color, 1px, -50px);
+							}
+							&::after {
+								.notch-mixin-on-left(@body-bg, 0, -50px);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: auto;
+							width: 37%;
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					.overlay {
+						height: 300px;
+						left: 0;
+						top: auto;
+						height: 50%;
+						width: auto;
+						.notch {
+							&::before {
+								.notch-mixin-on-top(@text-color, 1px);
+							}
+							&::after {
+								.notch-mixin-on-top(@body-bg, 0);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: 52%;
+							width: auto;
+						}
+					}
+				}
+			}
+			&.panel-brochures {
+				width: 20%;
+				.background {
+					background-image: url(/assets/img/covers/clockwork.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					height: 50%;
+					top: auto;
+					.notch {
+						bottom: 100%;
+						&::before {
+							.notch-mixin-on-top(@text-color, 1px);
+						}
+						&::after {
+							.notch-mixin-on-top;
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						height: 52%;
+					}
+				}
+				@media(max-width: 1000px) {
+					width: 35%;
+					.overlay {
+						height: 40%;
+						width: auto;
+						top: auto;
+						.notch {
+							&::before {
+								.notch-mixin-on-top(@text-color, 1px);
+							}
+							&::after {
+								.notch-mixin-on-top;
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							width: auto;
+							height: 42%;
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					.overlay {
+						height: 50%;
+					}
+					&:hover {
+						.overlay {
+							height: 52%;
+						}
+					}
+
+				}
+			}
+
+			&.panel-interfaces {
+				border-left: 1px solid @text-color;
+				width: 30%;
+				.background {
+					background-image: url(/assets/img/covers/mugshot.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					top: auto;
+					height: 50%;
+					.notch {
+						&::before {
+							.notch-mixin-on-top(@text-color, 1px, -100px);
+						}
+						&::after {
+							.notch-mixin-on-top(@body-bg, 0, -100px);
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						height: 52%;
+					}
+				}
+				@media(max-width: 1000px) {		
+					height: 150px;			
+					width: 100%;
+					.background {
+						background-size: auto;
+						background-position: 40% top;
+					}
+					.overlay {
+						height: auto;
+						right: auto;
+						top: -1px;
+						width: 40%;
+						.notch {
+							&::before {
+								.notch-mixin-on-right(@text-color, 1px);
+							}
+							&::after {
+								.notch-mixin-on-right(@body-bg, 0);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: auto;
+							width: 42%;
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					height: 200px;
+					width: 100%;
+					.background { background-size: 100% auto; }
+					.overlay {
+						height: auto;
+						width: 50%;
+					}
+					&:hover {
+						.overlay {
+							width: 52%;
+						}
+					}
+				}
+			}
+			&.panel-data {
+				width: 45%;
+				.background {
+					background-image: url(/assets/img/covers/mugshot.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					left: auto;
+					width: 50%;
+					.notch {
+						&::before {
+							.notch-mixin-on-left(@text-color, 1px, 50px);
+						}
+						&::after {
+							.notch-mixin-on-left(@body-bg, 0, 50px);
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						width: 52%;
+					}
+				}
+				@media(max-width: 1000px) {
+					width: 50%;
+					.overlay {
+						.notch {
+							&::before {
+								.notch-mixin-on-left(@text-color, 1px, -50px);
+							}
+							&::after {
+								.notch-mixin-on-left(@body-bg, 0, -50px);
+							}
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					width: 100%;
+					.background { background-size: 100% auto; }
+					.overlay {
+						width: 50.5%;
+					}
+					&:hover {
+						.overlay {
+							width: 53%;
+						}
+					}
+				}
+			}
+			&.panel-ios {
+				float: left;
+				width: 25%;
+				.background {
+					background-image: url(/assets/img/covers/clockwork.jpg);
+					background-position: left top;
+					background-size: 100% auto;
+				}
+				.overlay {
+					height: 43%;
+					top: auto;
+					.notch {
+						&::before {
+							.notch-mixin-on-top(@text-color, 1px);
+						}
+						&::after {
+							.notch-mixin-on-top;
+						}
+					}
+				}
+				&:hover {
+					.overlay {
+						height: 45%;
+					}
+				}
+				@media(max-width: 1000px) {
+					width: 50%;
+					.overlay {
+						height: auto;
+						top: -1px;
+						right: auto;
+						width: 50%;
+						.notch {
+							&::before {
+								.notch-mixin-on-right(@text-color, 1px, 25px);
+							}
+							&::after {
+								.notch-mixin-on-right(@body-bg, 0, 25px);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: auto;
+							width: 51%;
+						}
+					}
+				}
+				@media(max-width: 600px) {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -98,166 +534,6 @@ hr {
 		@cover-fg-color: #933;
 		@cover-logo-size: 120px;
 		.cover-mixin();
-	}
-}
-
-.main-content {
-	padding: 20px 20px 50px 20px;
-	position: absolute;
-	top: 0; right: 0; left: 30%;
-	max-width: 700px;
-	text-shadow: 0 1px 0 #fff;
-	.clearfix;
-	@media (max-width: 1000px) {
-		.main-content-wide();
-	}
-	@media(max-width: 600px) {
-		.main-content-wide();
-		width: 100%;
-	}
-	.all-posts {
-		&.posts {
-			article {
-				&.post-link {
-					height: 130px;
-				}
-			}
-		}
-	}
-	section {
-		clear: both;
-	}
-	.intro {
-		.indents {
-			position: relative;
-			span {
-				clear: both;
-				float: left;
-				height: 2em;
-			}
-		}
-		.indent1 {
-		}
-		.indent2 {
-		}
-		.indent3 {
-			width: 55px;
-		}
-		.indent4 {
-			width: 85px;
-		}
-		.indent5 {
-			width: 105px;
-		}
-		.indent6 {
-			width: 110px;
-		}
-		.indent7 {
-			width: 105px;
-		}
-		.indent8 {
-			width: 85px;
-		}
-		.indent9 {
-			width: 55px;
-		}
-		.mugshot {
-			position: absolute;
-			top: 115px;
-			left: -100px;
-			border-radius: 50%;
-			border: 5px solid @body-bg;
-			box-shadow: -2px 0 0 #666;
-			z-index: 50;
-			@media (max-width: 1000px) {
-				box-shadow: 1px 0 0 #666;
-				left: -75px;
-				top: 85px;
-			}
-			@media (max-width: 650px) {
-				left: -95px;
-			}
-		}
-	}
-	.posts {
-		article {
-			background-color: @body-bg;
-			border: 1px solid transparent;
-			padding: 5px;
-			position: relative;
-			&.post-link {
-				float: left;
-				height: 60px;
-				margin: 10px;
-				overflow: hidden;
-				.transition(all .25s);
-				.post-title {
-					font-size: 1.4em;
-					line-height: 1.2em;
-				}
-				&:hover, 
-				&:active {
-					cursor: pointer;
-	  				box-shadow: -4px 0 0 #333;
-	  				left: 10px;
-				}
-				&.half {
-					width: 45%;
-					@media (max-width: 1000px) {
-						width: 90%;
-					}
-				}
-				&.full {
-					width: 100%;
-				}
-				.time {
-					top: 10px;
-				}
-				a {
-					display: none;
-				}
-			}
-			.post-title {
-				margin-top: -1px;
-				line-height: 1em;
-				padding-left: 60px;
-				min-height: 50px;
-				@media(max-width: 600px) {
-					font-size: 1.6em;
-				}
-			}
-			.post-time();
-		}
-	}
-	.post {
-		position: relative;
-		.post-time();
-		.post-title {
-			min-height: 2em;
-			padding-left: 60px;
-			@media(max-width: 600px) {
-				font-size: 1.6em;
-			}
-		}
-	}
-	.post-navigation {
-		padding: 20px 0;
-		h2 {
-			margin-top: 0;
-		}
-		a {
-			display: block;
-			margin: 5px;
-		}
-	}
-	footer {
-		clear: both;
-		display: block;
-		float: left;
-		margin: 25px 0;
-		text-align: right;
-		font-style: italic;
-		width: 100%;
 	}
 }
 
