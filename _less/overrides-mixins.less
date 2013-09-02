@@ -2,7 +2,6 @@
 @import "overrides-variables.less";
 @import "../_bower_components/bootstrap/less/mixins.less";
 
-
 #gradient {
 	.vertical-alpha(@start-color: #555; @start-alpha: 0; @start-percent: 0%; @end-color: #333; @end-alpha: 1; @end-percent: 100%) {
 		background-color: transparent !important;
@@ -340,10 +339,9 @@
 		width: 100%;
 		.overlay {
 			background-color: @bg-color;
-			height: 300px;
 			left: 0;
 			right: auto;
-			height: auto;
+			height: 105%;
 			width: 50%;
 			.notch {
 				&::before {
@@ -356,7 +354,7 @@
 		}
 		&:hover {
 			.overlay {
-				height: auto;
+				height: 105%;
 				width: 50%;
 				.notch {
 					&::before {
@@ -376,10 +374,9 @@
 		width: 100%;
 		.overlay {
 			background-color: @bg-color;
-			height: 300px;
 			right: 0;
 			left: auto;
-			height: auto;
+			height: 105%;
 			width: 50%;
 			.notch {
 				&::before {
@@ -392,7 +389,7 @@
 		}
 		&:hover {
 			.overlay {
-				height: auto;
+				height: 105%;
 				width: 50%;
 				.notch {
 					&::before {
@@ -404,6 +401,30 @@
 				}
 			}
 		}
+	}
+}
+.readmore-mixin(@color: @body-bg) {
+	&::before {
+		#gradient .vertical-three-colors-alpha(@color; 0; @color; .5; 50%; @color; @end-alpha: 1);
+		bottom: 0;
+		content: "";
+		height: 50px;
+		left: 0px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 0px;
+		text-align: right;
+		z-index: 50;
+	}
+	&::after {
+		bottom: 0;
+		content: "...";
+		position: absolute;
+		font-size: 3em;
+		right: 5px;
+		height: 55px;
+		z-index: 75;
 	}
 }
 .post-time() {
@@ -463,12 +484,12 @@
 }
 
 .main-content {
+	.clearfix;
 	padding: 20px 20px 50px 20px;
 	position: absolute;
 	top: 0; right: 0; left: 30%;
 	max-width: 700px;
 	text-shadow: 0 1px 0 #fff;
-	.clearfix;
 	.all-posts {
 		&.posts {
 			article {
@@ -612,6 +633,7 @@
 		.overlay {
 			background-color: @body-bg;
 			border: 1px solid @text-color;
+			box-sizing: border-box;
 			padding: @padding @padding;
 			position: absolute;
 			top: -1px; right: -1px; bottom: -1px; left: -1px;
@@ -628,41 +650,20 @@
 				font-size: 1.6em;
 				margin: 5px 0;
 			}
-			p {
+			p.fadein {
 				opacity: 0;
 				margin-top: 25px;
 				.transition(all .25s);
 			}
 		}
 		.readmore {
-			&::before {
-				#gradient .vertical-three-colors-alpha(@body-bg; 0; @body-bg; .5; 50%; @body-bg; @end-alpha: 1);
-				bottom: 0;
-				content: "";
-				height: 50px;
-				left: 0px;
-				margin: 0;
-				padding: 0;
-				position: absolute;
-				right: 0px;
-				text-align: right;
-				z-index: 50;
-			}
-			&::after {
-				bottom: 0;
-				content: "...";
-				position: absolute;
-				font-size: 3em;
-				right: 5px;
-				height: 55px;
-				z-index: 75;
-			}
+			.readmore-mixin();
 		}
 		&.panel-link {
 			cursor: pointer;
 		}
 		&:hover {
-			p {
+			p.fadein {
 				opacity: 1;
 				margin-top: 10px;
 			}

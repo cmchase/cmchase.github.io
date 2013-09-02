@@ -8,7 +8,9 @@
 @import "overrides-scaffolding.less";
 @import "../_bower_components/bootstrap/less/type.less";
 @import "overrides-type.less";
+@import "../_bower_components/bootstrap/less/glyphicons.less";
 @import "../_bower_components/bootstrap/less/buttons.less";
+@import "../_bower_components/bootstrap/less/close.less";
 @import "../_bower_components/bootstrap/less/utilities.less";
 @import "../_bower_components/bootstrap/less/responsive-utilities.less";
 
@@ -87,6 +89,7 @@ hr {
 				}
 			}
 			&.panel-about {
+				@_bg-color: #fff;
 				width: 25%;
 				.background {
 					background-image: url(/assets/img/covers/mugshot.jpg);
@@ -94,21 +97,25 @@ hr {
 					background-size: 100% auto;
 				}
 				.overlay {
+					background-color: @_bg-color;
 					left: auto;
-					width: 50%;
+					width: 60%;
 					.notch {
 						&::before {
 							.notch-mixin-on-left(@text-color, 1px, 50px);
 						}
 						&::after {
-							.notch-mixin-on-left(@body-bg, 0, 50px);
+							.notch-mixin-on-left(@_bg-color, 0, 50px);
 						}
 					}
 				}
 				&:hover {
 					.overlay {
-						width: 52%;
+						width: 70%;
 					}
+				}
+				.readmore {
+					.readmore-mixin(@_bg-color);
 				}
 				@media(max-width: 1000px) {
 					width: 44%;
@@ -119,6 +126,7 @@ hr {
 				}
 			}
 			&.panel-works {
+				@_bg-color: #fff;
 				float: right;
 				height: 500px;
 				width: 30%;
@@ -128,21 +136,25 @@ hr {
 					background-size: 100% auto;
 				}
 				.overlay {
-					height: 150px;
+					background-color: @_bg-color;
+					height: 175px;
 					top: auto;
 					.notch {
 						&::before {
 							.notch-mixin-on-top(@text-color, 1px);
 						}
 						&::after {
-							.notch-mixin-on-top;
+							.notch-mixin-on-top(@_bg-color);
 						}
 					}
 				}
 				&:hover {
 					.overlay {
-						height: 160px;
+						height: 185px;
 					}
+				}
+				.readmore {
+					.readmore-mixin(@_bg-color);
 				}
 				@media(max-width: 1000px) {
 					height: 200px;
@@ -157,7 +169,7 @@ hr {
 								.notch-mixin-on-right(@text-color, 1px, 25px);
 							}
 							&::after {
-								.notch-mixin-on-right(@body-bg, 0, 25px);
+								.notch-mixin-on-right(@_bg-color, 0, 25px);
 							}
 						}
 					}
@@ -171,21 +183,22 @@ hr {
 				@media(max-width: 600px) {
 					height: 200px;
 					.overlay {
-						width: 60%;
+						width: 70%;
 					}
 					&:hover {
 						.overlay {
-							width: 62%;
+							width: 75%;
 						}
 					}
 				}
 			}
 			&.panel-posts {
-				background-color: @body-bg-offset;
+				@_bg-color: @body-bg;
+				background-color: @_bg-color;
 				border-left: 1px solid @text-color;
 				width: 70%;
 				article {
-					background-color: @body-bg-offset;
+					background-color: @_bg-color;
 				}
 				@media(max-width: 1000px) {
 					height: auto;
@@ -196,9 +209,6 @@ hr {
 	}
 }
 .works {
-	.details {
-		display: none;
-	}
 	.cover {
 		@cover-bg-color: #333;
 		@cover-fg-color: #fff;
@@ -210,7 +220,10 @@ hr {
 	.main-content {
 		.main-content-panels();
 		section {
+			cursor: pointer;
+			.transition(~"all .5s ease-out");
 			&.panel-intro {
+				cursor: default;
 				height: 600px;
 				width: 25%;
 				@media(max-width: 1000px) {
@@ -270,7 +283,7 @@ hr {
 					.panel-sm-left();
 				}
 			}
-			&.panel-brochures {
+			&.panel-interfaces {
 				width: 30%;
 				.background {
 					background-image: url(/assets/img/works/al-brochure-01-sm.png);
@@ -292,7 +305,7 @@ hr {
 				}
 				&:hover {
 					.overlay {
-						height: 60%;
+						height: 65%;
 					}
 				}
 				@media(max-width: 1000px) {
@@ -321,8 +334,8 @@ hr {
 					.panel-sm-right();
 				}
 			}
-			&.panel-interfaces {
-				width: 37%;
+			&.panel-data {
+				width: 28%;
 				.background {
 					background-image: url(/assets/img/works/sp-interval-lg.png);
 					background-position: left top;
@@ -331,7 +344,7 @@ hr {
 				.overlay {
 					background-color: @body-bg-offset;
 					right: auto;
-					width: 50%;
+					width: 55%;
 					.notch {
 						&::before {
 							.notch-mixin-on-right(@text-color, 1px, -100px);
@@ -378,8 +391,8 @@ hr {
 					.panel-sm-left();
 				}
 			}
-			&.panel-data {
-				width: 38%;
+			&.panel-brochures {
+				width: 25%;
 				.background {
 					background-image: url(/assets/img/works/key-metrics-lg.png);
 					background-position: left top;
@@ -388,7 +401,7 @@ hr {
 				.overlay {
 					background-color: #fff;
 					top: auto;
-					height: 40%;
+					height: 50%;
 					.notch {
 						&::before {
 							.notch-mixin-on-top(@text-color, 1px, 50px);
@@ -400,7 +413,7 @@ hr {
 				}
 				&:hover {
 					.overlay {
-						height: 50%;
+						height: 75%;
 					}
 				}
 				@media(max-width: 1000px) {
@@ -421,8 +434,9 @@ hr {
 				}
 			}
 			&.panel-ios {
+				@_bg-color: #fff;
 				float: left;
-				width: 30%;
+				width: 22%;
 				.background {
 					background-image: url(/assets/img/works/sl-03-lg.png);
 					background-position: left top;
@@ -431,25 +445,26 @@ hr {
 				.overlay {
 					background-color: #fff;
 					height: 43%;
-					top: auto;
+					bottom: auto;
 					.notch {
 						&::before {
-							.notch-mixin-on-top(@text-color, 1px);
+							.notch-mixin-on-bottom(@text-color, 1px);
 						}
 						&::after {
-							.notch-mixin-on-top(#fff);
+							.notch-mixin-on-bottom(@_bg-color);
 						}
 					}
 				}
 				&:hover {
 					.overlay {
-						height: 60%;
+						height: 65%;
 					}
 				}
 				@media(max-width: 1000px) {
+					@_bg-color: @body-bg-offset;
 					width: 50%;
 					.overlay {
-						background-color: @body-bg-offset;
+						background-color: @_bg-color;
 						height: auto;
 						top: -1px;
 						right: auto;
@@ -459,7 +474,7 @@ hr {
 								.notch-mixin-on-right(@text-color, 1px, 25px);
 							}
 							&::after {
-								.notch-mixin-on-right(@body-bg-offset, 0, 25px);
+								.notch-mixin-on-right(@_bg-color, 0, 25px);
 							}
 						}
 					}
@@ -474,10 +489,109 @@ hr {
 					.panel-sm-left()
 				}
 			}
-			&.active-panel {
+		}
+		.details-panels {
+			.clearfix();
+			height: auto;
+			min-height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			section {
+				.transition(all .25s ease-out);
+				background-color: rgba(51,51,51,.98);
+				bottom: 0px;
+				cursor: default;
+				color: @body-bg;
+				display: inline-block;
+				height: auto;
+				left: 	0;
+				overflow: hidden;
+				padding: 10px 20px;
 				position: absolute;
-				left: 0;
-				top: 0;
+				right: 	0px;
+				text-shadow: 0 1px 0 #000;
+				top: 	0px;
+				width: auto;
+				z-index: 100;
+				// start major refactor
+				&.panel-intro {
+					@_width: 36%;
+					background-color: white;
+					left: 0;
+					right: 0;
+					width: @_width;
+					z-index: 75;
+					a.close {
+						border: none;
+						color: @text-color;
+						font-size: 2em;
+						line-height: 75px;
+						opacity: 1;
+						position: absolute;
+						right: 0;
+						text-align: center;
+						text-shadow: 0 1px 0 #000;
+						top: 0;
+						width: 75px;
+						.transition(all .1s);
+						&:hover {
+							font-size: 3em;
+						}
+					}
+				}
+				&.panel-content {
+					.clearfix();
+					@_width: 64%;
+					height: auto;
+					left: auto;
+					right: 0;
+					width: @_width;
+					z-index: 50;
+				}
+			}
+			&.inactive-panels {
+				section {
+					height: 0;
+					padding: 0;
+					width: 0;
+				}
+			}
+			&.active-panels {
+				width: 100%;
+				section {
+					&.panel-intro {
+						.notch {
+							&::after {
+								.notch-mixin-on-right(#fff, 0);
+							}
+						}
+						@media(max-width: 600px) {
+							bottom: auto;
+							left: auto; 
+							position: relative;
+							right: auto; 
+							top: auto; 
+							width: 100%;
+							.notch {
+								&::after {
+									.notch-mixin-on-bottom(#fff, 0, -40%);
+								}
+							}
+						}
+					}
+					&.panel-content {
+						@media(max-width: 600px) {
+							bottom: auto;
+							left: auto; 
+							position: relative;
+							right: auto; 
+							top: auto; 
+							width: 100%;
+						}
+					}
+				}
 			}
 		}
 	}
