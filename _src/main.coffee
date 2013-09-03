@@ -38,13 +38,19 @@ $ ->
 		$("a.works-image-link").removeClass("active-thumb")
 		$(".works-full-image").hide()
 
-	$("a.works-image-link").on("click", ->
-		resetWorksImages()
-		$(this).addClass("active-thumb")
-			.parent().find(".works-full-image").attr("src", $(this).attr("href")).show()
-		return false
+	$("a.works-image-link").each(() ->
+		$(this).on("click", ->
+			if $(this).hasClass("active-thumb")
+				resetWorksImages()
+			else
+				resetWorksImages()
+				$(this).addClass("active-thumb")
+					.parent().find(".works-full-image").attr("src", $(this).attr("href")).show()
+			return false
+		)
 	)
 
 	$(".works-full-image").on("click", ->
 		resetWorksImages()
+		return false
 	)
