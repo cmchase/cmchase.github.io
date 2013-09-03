@@ -234,9 +234,13 @@ hr {
 			&.panel-wireframing {
 				width: 45%;
 				.background {
-					background-image: url(/assets/img/works/wireframes-sm.png);
-					background-position: left top;
-					background-size: 100% auto;
+					background-image: url(/assets/img/works/wireframes/cover.jpg);
+					background-position: 7% top;
+					background-size: 60% auto;
+					@media(max-width: 600px) {
+						background-position: left top;
+						background-size: cover;
+					}
 				}
 				.overlay {
 					background-color: @body-bg-offset;
@@ -286,7 +290,7 @@ hr {
 			&.panel-interfaces {
 				width: 30%;
 				.background {
-					background-image: url(/assets/img/works/al-brochure-01-sm.png);
+					background-image: url(/assets/img/works/interfaces/cover.jpg);
 					background-position: left top;
 					background-size: 100% auto;
 				}
@@ -337,7 +341,7 @@ hr {
 			&.panel-data {
 				width: 28%;
 				.background {
-					background-image: url(/assets/img/works/sp-interval-lg.png);
+					background-image: url(/assets/img/works/data/cover.jpg);
 					background-position: left top;
 					background-size: 100% auto;
 				}
@@ -394,7 +398,7 @@ hr {
 			&.panel-brochures {
 				width: 25%;
 				.background {
-					background-image: url(/assets/img/works/key-metrics-lg.png);
+					background-image: url(/assets/img/works/brochures/cover.jpg);
 					background-position: left top;
 					background-size: 100% auto;
 				}
@@ -465,6 +469,7 @@ hr {
 					width: 50%;
 					.overlay {
 						background-color: @_bg-color;
+						bottom: -1px;
 						height: auto;
 						top: -1px;
 						right: auto;
@@ -492,6 +497,7 @@ hr {
 		}
 		.details-panels {
 			.clearfix();
+			//font-family: @font-family-sans-serif;
 			height: auto;
 			min-height: 100%;
 			left: 0;
@@ -500,32 +506,26 @@ hr {
 			width: 100%;
 			section {
 				.transition(all .25s ease-out);
-				background-color: rgba(51,51,51,.98);
 				bottom: 0px;
 				cursor: default;
-				color: @body-bg;
 				display: inline-block;
 				height: auto;
-				left: 	0;
 				overflow: hidden;
 				padding: 10px 20px;
-				position: absolute;
-				right: 	0px;
-				text-shadow: 0 1px 0 #000;
-				top: 	0px;
+				position: relative;
 				width: auto;
-				z-index: 100;
-				// start major refactor
 				&.panel-intro {
 					@_width: 36%;
-					background-color: white;
-					left: 0;
-					right: 0;
+					color: @body-bg;
+					float: left;
+					font-family: @font-family-sans-serif;
+					height: 100%;
+					text-shadow: 0 1px 0 #000;
 					width: @_width;
 					z-index: 75;
 					a.close {
 						border: none;
-						color: @text-color;
+						color: @body-bg;
 						font-size: 2em;
 						line-height: 75px;
 						opacity: 1;
@@ -533,22 +533,33 @@ hr {
 						right: 0;
 						text-align: center;
 						text-shadow: 0 1px 0 #000;
-						top: 0;
+						top: -5px;
 						width: 75px;
 						.transition(all .1s);
 						&:hover {
 							font-size: 3em;
 						}
+						@media(max-width: 1000px) {
+							right: -10px;
+						}
+						@media(max-width: 600px) {
+							right: 5px;
+							top: -15px;
+						}
 					}
 				}
 				&.panel-content {
+					background-color: rgba(255, 255, 255, .98);
 					.clearfix();
 					@_width: 64%;
 					height: auto;
-					left: auto;
-					right: 0;
+					float: right;
+					padding-bottom: 25px;
 					width: @_width;
 					z-index: 50;
+					h2 {
+						margin-top: 10px; 
+					}
 				}
 			}
 			&.inactive-panels {
@@ -559,12 +570,16 @@ hr {
 				}
 			}
 			&.active-panels {
+				background-color: rgba(51,51,51,.98);
 				width: 100%;
+				z-index: 50;
 				section {
 					&.panel-intro {
+						overflow: visible;
 						.notch {
 							&::after {
-								.notch-mixin-on-right(#fff, 0);
+								.notch-mixin-on-right(#333, 0);
+								top: 40px;
 							}
 						}
 						@media(max-width: 600px) {
@@ -574,9 +589,10 @@ hr {
 							right: auto; 
 							top: auto; 
 							width: 100%;
+							min-height: auto !important;
 							.notch {
 								&::after {
-									.notch-mixin-on-bottom(#fff, 0, -40%);
+									.notch-mixin-on-bottom(#333, 0, -40%);
 								}
 							}
 						}
@@ -592,6 +608,40 @@ hr {
 						}
 					}
 				}
+			}
+		}
+		.works-images {
+			text-align: center;
+			a {
+				border: 10px solid transparent;
+				border-radius: 5px;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				width: 200px;
+				&:hover {
+					border-color: @body-bg-offset;
+				}
+				&.active-thumb {
+					border-color: #333;
+					&::after {
+						.notch-mixin-on-bottom(#333, 10px);
+					}
+				}
+				img {
+					border: 1px solid #333;
+					max-width: 100%;
+				}
+				@media(max-width: 600px) {
+					width: 120px;
+				}
+			}
+			.works-image-link{}
+			.works-full-image {
+				cursor: pointer;
+				margin-top: 25px;
+				max-width: 100%;
 			}
 		}
 	}

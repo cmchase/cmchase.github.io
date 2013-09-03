@@ -8,19 +8,43 @@ $ ->
 	$(".post-link, .panel-link").on("click", ->
 		window.location = $(this).data("link")
 	)
+
 	$(".data-link").hide();
+
 	$(".branding").on("click", ->
 		window.location = $(this).data("link")
 	)
+
 	$(".works .preview-panels section").on("click", ->
 		selector = $(".panels.details-panels." + $(this).data("workgroup"))
 
 		selector.addClass("active-panels").removeClass("inactive-panels")
-		alert(selector.height())
+
+		if ($(window).width() > 601)
+			selector.find("section").css("min-height", selector.parent().height())	
+		else
+			selector.find("section.panel-content").css("min-height", selector.parent().height() - selector.find("section.panel-intro").height()) 
+
+
 		window.scrollTo(0, $("aside.cover").height())
 	)
+
 	$("a.close").on("click", ->
 		$(".active-panels").removeClass("active-panels").addClass("inactive-panels")
+			.find("section").removeAttr("style")
 	)
 
-	
+	resetWorksImages = () ->
+		$("a.works-image-link").removeClass("active-thumb")
+		$(".works-full-image").hide()
+
+	$("a.works-image-link").on("click", ->
+		resetWorksImages()
+		$(this).addClass("active-thumb")
+			.parent().find(".works-full-image").attr("src", $(this).attr("href")).show()
+		return false
+	)
+
+	$(".works-full-image").on("click", ->
+		resetWorksImages()
+	)
