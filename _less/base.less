@@ -68,7 +68,7 @@ hr {
 		.main-content-panels();
 		section {
 			&.panel-latest-post {
-				border-left: 1px solid @text-color;
+				border-color: transparent;
 				.transition(border-left .25s);
 				width: 45%;
 				.post {
@@ -194,8 +194,7 @@ hr {
 			}
 			&.panel-posts {
 				@_bg-color: @body-bg;
-				background-color: @_bg-color;
-				border-left: 1px solid @text-color;
+				border-color: transparent;
 				width: 70%;
 				article {
 					background-color: @_bg-color;
@@ -222,11 +221,14 @@ hr {
 		section {
 			cursor: pointer;
 			&.panel-intro {
+				border-bottom-width: 0;
 				cursor: default;
-				height: 600px;
+				min-height: 500px;
 				width: 25%;
 				@media(max-width: 1000px) {
+					border-bottom-width: 1px;
 					height: auto;
+					min-height: 0;
 					width: 100%;
 				}
 			}
@@ -263,6 +265,8 @@ hr {
 				@media(max-width: 1000px) {
 					width: 65%;
 					.overlay {
+						@_bg-color: #fff;
+						background-color: @_bg-color;
 						height: auto;
 						left: auto;
 						top: -1px;
@@ -272,7 +276,7 @@ hr {
 								.notch-mixin-on-left(@text-color, 1px, -50px);
 							}
 							&::after {
-								.notch-mixin-on-left(@body-bg-offset, 0, -50px);
+								.notch-mixin-on-left(@_bg-color, 0, -50px);
 							}
 						}
 					}
@@ -372,6 +376,8 @@ hr {
 						background-position: 40% top;
 					}
 					.overlay {
+						@_bg-color: #fff;
+						background-color: @_bg-color;
 						height: auto;
 						right: auto;
 						top: -1px;
@@ -381,7 +387,7 @@ hr {
 								.notch-mixin-on-right(@text-color, 1px);
 							}
 							&::after {
-								.notch-mixin-on-right(@body-bg-offset, 0);
+								.notch-mixin-on-right(@_bg-color, 0);
 							}
 						}
 					}
@@ -425,12 +431,14 @@ hr {
 				@media(max-width: 1000px) {
 					width: 50%;
 					.overlay {
+					@_bg-color: #fff;
+					background-color: @_bg-color;
 						.notch {
 							&::before {
 								.notch-mixin-on-top(@text-color, 1px);
 							}
 							&::after {
-								.notch-mixin-on-top(#fff, 0);
+								.notch-mixin-on-top(@_bg-color, 0);
 							}
 						}
 					}
