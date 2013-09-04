@@ -218,111 +218,93 @@ hr {
 	}
 	.main-content {
 		.main-content-panels();
-		section {
-			cursor: pointer;
-			&.panel-intro {
-				border-bottom-width: 0;
-				cursor: default;
-				min-height: 500px;
-				width: 25%;
-				@media(max-width: 1000px) {
-					border-bottom-width: 1px;
-					height: auto;
-					min-height: 0;
-					width: 100%;
-				}
-			}
-			&.panel-wireframing {
-				width: 45%;
-				.background {
-					background-image: url(/assets/img/works/wireframes/cover.jpg);
-					background-position: 7% top;
-					background-size: 60% auto;
-					@media(max-width: 600px) {
-						background-position: left top;
-						background-size: cover;
+		.preview-panels {
+			section {
+				cursor: pointer;
+				&.panel-intro {
+					border-bottom-width: 0;
+					cursor: default;
+					min-height: 500px;
+					width: 25%;
+					z-index: 100;
+					@media(max-width: 1000px) {
+						border-bottom-width: 1px;
+						height: auto;
+						min-height: 0;
+						width: 100%;
 					}
 				}
-				.overlay {
-					@_bg-color: #fff;
-					background-color: @_bg-color;
-					left: auto;
-					width: 40%;
-					.notch {
-						&::before {
-							.notch-mixin-on-left(@text-color, 1px, 0);
-						}
-						&::after {
-							.notch-mixin-on-left(@_bg-color, 0, 0);
+				&.panel-wireframing {
+					width: 45%;
+					.background {
+						background-image: url(/assets/img/works/wireframes/cover.jpg);
+						background-position: 7% top;
+						background-size: 60% auto;
+						@media(max-width: 600px) {
+							background-position: left top;
+							background-size: cover;
 						}
 					}
-				}
-				&:hover {
-					.overlay {
-						//width: 42%;
-					}
-				}
-				@media(max-width: 1000px) {
-					width: 65%;
 					.overlay {
 						@_bg-color: #fff;
 						background-color: @_bg-color;
-						height: auto;
 						left: auto;
-						top: -1px;
 						width: 40%;
 						.notch {
 							&::before {
-								.notch-mixin-on-left(@text-color, 1px, -50px);
+								.notch-mixin-on-left(@text-color, 1px, 0);
 							}
 							&::after {
-								.notch-mixin-on-left(@_bg-color, 0, -50px);
+								.notch-mixin-on-left(@_bg-color, 0, 0);
 							}
 						}
 					}
 					&:hover {
 						.overlay {
+							//width: 42%;
+						}
+					}
+					@media(max-width: 1000px) {
+						width: 65%;
+						.overlay {
+							@_bg-color: #fff;
+							background-color: @_bg-color;
 							height: auto;
-							width: 43%;
+							left: auto;
+							top: -1px;
+							width: 40%;
+							.notch {
+								&::before {
+									.notch-mixin-on-left(@text-color, 1px, -50px);
+								}
+								&::after {
+									.notch-mixin-on-left(@_bg-color, 0, -50px);
+								}
+							}
+						}
+						&:hover {
+							.overlay {
+								height: auto;
+								width: 43%;
+							}
 						}
 					}
-				}
-				@media(max-width: 600px) {
-					.panel-sm-left();
-				}
-			}
-			&.panel-interfaces {
-				width: 30%;
-				.background {
-					background-image: url(/assets/img/works/interfaces/cover.jpg);
-					background-position: left top;
-					background-size: 100% auto;
-				}
-				.overlay {
-					height: 50%;
-					top: auto;
-					.notch {
-						bottom: 100%;
-						&::before {
-							.notch-mixin-on-top(@text-color, 1px);
-						}
-						&::after {
-							.notch-mixin-on-top;
-						}
+					@media(max-width: 600px) {
+						.panel-sm-left();
 					}
 				}
-				&:hover {
+				&.panel-interfaces {
+					width: 30%;
+					.background {
+						background-image: url(/assets/img/works/interfaces/cover.jpg);
+						background-position: left top;
+						background-size: 100% auto;
+					}
 					.overlay {
-						height: 65%;
-					}
-				}
-				@media(max-width: 1000px) {
-					width: 35%;
-					.overlay {
-						height: 40%;
-						width: auto;
+						height: 50%;
 						top: auto;
 						.notch {
+							bottom: 100%;
 							&::before {
 								.notch-mixin-on-top(@text-color, 1px);
 							}
@@ -333,175 +315,196 @@ hr {
 					}
 					&:hover {
 						.overlay {
+							height: 65%;
+						}
+					}
+					@media(max-width: 1000px) {
+						width: 35%;
+						.overlay {
+							height: 40%;
 							width: auto;
-							height: 70%;
+							top: auto;
+							.notch {
+								&::before {
+									.notch-mixin-on-top(@text-color, 1px);
+								}
+								&::after {
+									.notch-mixin-on-top;
+								}
+							}
+						}
+						&:hover {
+							.overlay {
+								width: auto;
+								height: 70%;
+							}
 						}
 					}
-				}
-				@media(max-width: 600px) {
-					.panel-sm-right();
-				}
-			}
-			&.panel-data {
-				width: 28%;
-				.background {
-					background-image: url(/assets/img/works/data/cover.jpg);
-					background-position: left top;
-					background-size: 100% auto;
-				}
-				.overlay {
-					@_bg-color: @body-bg-offset;
-					background-color: @_bg-color;
-					right: auto;
-					width: 55%;
-					.notch {
-						&::before {
-							.notch-mixin-on-right(@text-color, 1px, -100px);
-						}
-						&::after {
-							.notch-mixin-on-right(@_bg-color, 0, -100px);
-						}
+					@media(max-width: 600px) {
+						.panel-sm-right();
 					}
 				}
-				&:hover {
-					.overlay {
-						//height: 52%;
-					}
-				}
-				@media(max-width: 1000px) {		
-					height: 175px;			
-					width: 100%;
+				&.panel-data {
+					width: 28%;
 					.background {
-						background-size: auto;
-						background-position: 40% top;
+						background-image: url(/assets/img/works/data/cover.jpg);
+						background-position: left top;
+						background-size: 100% auto;
 					}
 					.overlay {
+						@_bg-color: @body-bg-offset;
+						background-color: @_bg-color;
+						right: auto;
+						width: 55%;
+						.notch {
+							&::before {
+								.notch-mixin-on-right(@text-color, 1px, -100px);
+							}
+							&::after {
+								.notch-mixin-on-right(@_bg-color, 0, -100px);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							//height: 52%;
+						}
+					}
+					@media(max-width: 1000px) {		
+						height: 175px;			
+						width: 100%;
+						.background {
+							background-size: auto;
+							background-position: 40% top;
+						}
+						.overlay {
+							@_bg-color: #fff;
+							background-color: @_bg-color;
+							height: auto;
+							right: auto;
+							top: -1px;
+							width: 40%;
+							.notch {
+								&::before {
+									.notch-mixin-on-right(@text-color, 1px);
+								}
+								&::after {
+									.notch-mixin-on-right(@_bg-color, 0);
+								}
+							}
+						}
+						&:hover {
+							.overlay {
+								height: auto;
+								width: 42%;
+							}
+						}
+					}
+					@media(max-width: 600px) {
+						.panel-sm-left();
+					}
+				}
+				&.panel-brochures {
+					width: 25%;
+					.background {
+						background-image: url(/assets/img/works/brochures/cover.jpg);
+						background-position: left top;
+						background-size: 100% auto;
+					}
+					.overlay {
+						@_bg-color: @body-bg-offset;
+						background-color: @_bg-color;
+						top: auto;
+						height: 50%;
+						.notch {
+							&::before {
+								.notch-mixin-on-top(@text-color, 1px, 50px);
+							}
+							&::after {
+								.notch-mixin-on-top(@_bg-color, 0, 50px);
+							}
+						}
+					}
+					&:hover {
+						.overlay {
+							height: 75%;
+						}
+					}
+					@media(max-width: 1000px) {
+						width: 50%;
+						.overlay {
 						@_bg-color: #fff;
 						background-color: @_bg-color;
-						height: auto;
-						right: auto;
-						top: -1px;
-						width: 40%;
-						.notch {
-							&::before {
-								.notch-mixin-on-right(@text-color, 1px);
-							}
-							&::after {
-								.notch-mixin-on-right(@_bg-color, 0);
+							.notch {
+								&::before {
+									.notch-mixin-on-top(@text-color, 1px);
+								}
+								&::after {
+									.notch-mixin-on-top(@_bg-color, 0);
+								}
 							}
 						}
 					}
-					&:hover {
-						.overlay {
-							height: auto;
-							width: 42%;
-						}
+					@media(max-width: 600px) {
+						.panel-sm-right();
 					}
 				}
-				@media(max-width: 600px) {
-					.panel-sm-left();
-				}
-			}
-			&.panel-brochures {
-				width: 25%;
-				.background {
-					background-image: url(/assets/img/works/brochures/cover.jpg);
-					background-position: left top;
-					background-size: 100% auto;
-				}
-				.overlay {
-					@_bg-color: @body-bg-offset;
-					background-color: @_bg-color;
-					top: auto;
-					height: 50%;
-					.notch {
-						&::before {
-							.notch-mixin-on-top(@text-color, 1px, 50px);
-						}
-						&::after {
-							.notch-mixin-on-top(@_bg-color, 0, 50px);
-						}
-					}
-				}
-				&:hover {
-					.overlay {
-						height: 75%;
-					}
-				}
-				@media(max-width: 1000px) {
-					width: 50%;
-					.overlay {
+				&.panel-ios {
 					@_bg-color: #fff;
-					background-color: @_bg-color;
+					float: left;
+					width: 22%;
+					.background {
+						background-image: url(/assets/img/works/ios/cover.jpg);
+						background-position: left top;
+						background-size: 100% auto;
+					}
+					.overlay {
+						background-color: #fff;
+						height: 43%;
+						bottom: auto;
 						.notch {
 							&::before {
-								.notch-mixin-on-top(@text-color, 1px);
+								.notch-mixin-on-bottom(@text-color, 1px);
 							}
 							&::after {
-								.notch-mixin-on-top(@_bg-color, 0);
-							}
-						}
-					}
-				}
-				@media(max-width: 600px) {
-					.panel-sm-right();
-				}
-			}
-			&.panel-ios {
-				@_bg-color: #fff;
-				float: left;
-				width: 22%;
-				.background {
-					background-image: url(/assets/img/works/ios/cover.jpg);
-					background-position: left top;
-					background-size: 100% auto;
-				}
-				.overlay {
-					background-color: #fff;
-					height: 43%;
-					bottom: auto;
-					.notch {
-						&::before {
-							.notch-mixin-on-bottom(@text-color, 1px);
-						}
-						&::after {
-							.notch-mixin-on-bottom(@_bg-color);
-						}
-					}
-				}
-				&:hover {
-					.overlay {
-						height: 65%;
-					}
-				}
-				@media(max-width: 1000px) {
-					@_bg-color: @body-bg-offset;
-					width: 50%;
-					.overlay {
-						background-color: @_bg-color;
-						bottom: -1px;
-						height: auto;
-						top: -1px;
-						right: auto;
-						width: 50%;
-						.notch {
-							&::before {
-								.notch-mixin-on-right(@text-color, 1px, 25px);
-							}
-							&::after {
-								.notch-mixin-on-right(@_bg-color, 0, 25px);
+								.notch-mixin-on-bottom(@_bg-color);
 							}
 						}
 					}
 					&:hover {
 						.overlay {
-							height: auto;
-							width: 51%;
+							height: 65%;
 						}
 					}
-				}
-				@media(max-width: 600px) {
-					.panel-sm-left()
+					@media(max-width: 1000px) {
+						@_bg-color: @body-bg-offset;
+						width: 50%;
+						.overlay {
+							background-color: @_bg-color;
+							bottom: -1px;
+							height: auto;
+							top: -1px;
+							right: auto;
+							width: 50%;
+							.notch {
+								&::before {
+									.notch-mixin-on-right(@text-color, 1px, 25px);
+								}
+								&::after {
+									.notch-mixin-on-right(@_bg-color, 0, 25px);
+								}
+							}
+						}
+						&:hover {
+							.overlay {
+								height: auto;
+								width: 51%;
+							}
+						}
+					}
+					@media(max-width: 600px) {
+						.panel-sm-left()
+					}
 				}
 			}
 		}
@@ -590,15 +593,17 @@ hr {
 					padding: 0;
 					opacity: 0;
 					width: 0;
+					z-index: 0;
 				}
 			}
 			&.active-panels {
 				background-color: rgba(51,51,51,.98);
 				width: 100%;
-				z-index: 50;
+				z-index: 100;
 				section {
 					&.panel-intro {
 						overflow: visible;
+						border-bottom-width: none;
 						a.btn-pill {
 							color: #fff;
 							border-color: #fff;
