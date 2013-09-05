@@ -335,7 +335,7 @@
 
 .panel-sm-left(@bg-color: @body-bg, @fg-color: @text-color) {
 	@media(max-width: 600px) {
-		height: 300px;
+		height: 200px;
 		width: 100%;
 		.overlay {
 			background-color: @bg-color;
@@ -343,6 +343,9 @@
 			right: auto;
 			height: 105%;
 			width: 50%;
+			h2 {
+				font-size: 1.4em;
+			}
 			.notch {
 				&::before {
 					.notch-mixin-on-right(@fg-color, 1px);
@@ -364,13 +367,16 @@
 						.notch-mixin-on-right(@bg-color, 0, -50px);
 					}
 				}
+				p {
+					display: none;
+				}
 			}
 		}
 	}
 }
 .panel-sm-right(@bg-color: @body-bg, @fg-color: @text-color) {
 	@media(max-width: 600px) {
-		height: 300px;
+		height: 200px;
 		width: 100%;
 		.overlay {
 			background-color: @bg-color;
@@ -378,6 +384,9 @@
 			left: auto;
 			height: 105%;
 			width: 50%;
+			h2 {
+				font-size: 1.4em;
+			}
 			.notch {
 				&::before {
 					.notch-mixin-on-left(@fg-color, 1px);
@@ -398,6 +407,9 @@
 					&::after {
 						.notch-mixin-on-left(@bg-color, 0, -50px);
 					}
+				}
+				p {
+					display: none;
 				}
 			}
 		}
