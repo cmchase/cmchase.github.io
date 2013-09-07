@@ -27,10 +27,6 @@ grunt.loadNpmTasks('grunt-contrib-less');
     yeoman: yeomanConfig,
 
     watch: {
-      // sass: {
-      //   files: ['<%= yeoman.app %>/_less/**/*.{scss,sass}'],
-      //   tasks: ['sass:server']
-      // },
       less: {
         files: ['<%= yeoman.app %>/_less/**/*.less'],
         tasks: ['less:server']
