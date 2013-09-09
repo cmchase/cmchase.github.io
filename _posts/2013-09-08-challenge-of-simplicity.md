@@ -26,4 +26,4 @@ There I was today with my greasy-ass hair, staring at a full bookshelf and my un
 
 Now there's a bag of hair and pens in the alley and a pile of books at the door I'll be taking into the office tomorrow. (Maybe I should bring the hair, too. You never know…)
 
-For what it's worth, I've apologized to my wife but I think I'll be on high-alert for sneaky bullshit and I'm eyeballing that drawer for t-shirts next.
+For what it's worth, I've apologized to my wife but I think I'll be on high-alert for sneaky bullshit and I'm eyeballing that drawer of t-shirts next.
