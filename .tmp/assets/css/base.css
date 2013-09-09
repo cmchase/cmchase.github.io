@@ -49,7 +49,7 @@ body {
   clear: both;
 }
 .main-content .all-posts.posts article.post-link {
-  height: 130px;
+  height: auto;
 }
 .main-content section {
   clear: both;
@@ -70,7 +70,7 @@ body {
 }
 .main-content .posts article.post-link .post-title {
   font-size: 1.4em;
-  line-height: 1.2em;
+  line-height: 1.1em;
 }
 .main-content .posts article.post-link:hover,
 .main-content .posts article.post-link:active {
@@ -110,6 +110,7 @@ body {
   color: #333;
   display: inline-block;
   font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: .9em;
   line-height: 1em;
   left: 5px;
   position: absolute;
@@ -158,6 +159,7 @@ body {
   color: #333;
   display: inline-block;
   font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: .9em;
   line-height: 1em;
   left: 5px;
   position: absolute;
@@ -334,12 +336,18 @@ body {
   z-index: 50;
 }
 .panels section .readmore::after {
-  bottom: 0;
+  background-color: #333333;
+  border: 1px solid #000;
+  border-radius: 4px;
+  bottom: 5px;
+  color: #f2f2f2;
   content: "...";
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   right: 5px;
-  height: 55px;
+  height: 20px;
+  line-height: 0;
+  padding: 1px 5px 5px;
   z-index: 75;
 }
 .panels section.panel-link {
@@ -536,7 +544,7 @@ html {
 }
 body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.428571429;
   color: #333333;
   background-color: #f2f2f2;
@@ -596,8 +604,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -636,17 +644,17 @@ h6 a {
   border-bottom: none;
 }
 p {
-  margin: 0 0 11px;
+  margin: 0 0 12.5px;
 }
 .lead {
-  margin-bottom: 22px;
-  font-size: 18.4px;
+  margin-bottom: 25px;
+  font-size: 20.7px;
   font-weight: 200;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 24px;
+    font-size: 27px;
   }
 }
 small {
@@ -717,62 +725,62 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 22px;
-  margin-bottom: 11px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 h4,
 h5,
 h6 {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 h1,
 .h1 {
-  font-size: 41px;
+  font-size: 46px;
 }
 h2,
 .h2 {
-  font-size: 34px;
+  font-size: 38px;
 }
 h3,
 .h3 {
-  font-size: 28px;
+  font-size: 31px;
 }
 h4,
 .h4 {
-  font-size: 20px;
+  font-size: 23px;
 }
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h1 small,
 .h1 small {
-  font-size: 28px;
+  font-size: 31px;
 }
 h2 small,
 .h2 small {
-  font-size: 20px;
+  font-size: 23px;
 }
 h3 small,
 .h3 small,
 h4 small,
 .h4 small {
-  font-size: 16px;
+  font-size: 18px;
 }
 .page-header {
-  padding-bottom: 10px;
-  margin: 44px 0 22px;
+  padding-bottom: 11.5px;
+  margin: 50px 0 25px;
   border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 12.5px;
 }
 ul ul,
 ol ul,
@@ -794,7 +802,7 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 dt,
 dd {
@@ -854,12 +862,12 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 11px 22px;
-  margin: 0 0 22px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
-  font-size: 20px;
+  font-size: 22.5px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -898,7 +906,7 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -1522,7 +1530,7 @@ address {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -1821,14 +1829,14 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg {
   padding: 10px 16px;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm,
 .btn-xs {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -1851,7 +1859,7 @@ input[type="button"].btn-block {
 }
 .close {
   float: right;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: bold;
   line-height: 1;
   color: #000000;
@@ -2536,7 +2544,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -2574,7 +2582,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -2592,7 +2600,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -2746,23 +2754,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 .inverse .cover {
@@ -2834,7 +2830,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .inverse .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -2872,7 +2868,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .inverse .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -2890,7 +2886,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .inverse .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -3044,23 +3040,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .inverse .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 .home .cover {
@@ -3138,7 +3122,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .home .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -3176,7 +3160,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .home .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -3194,7 +3178,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .home .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -3348,23 +3332,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .home .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 .home .main-content {
@@ -3468,12 +3440,18 @@ hr::after {
   z-index: 50;
 }
 .home .main-content section.panel-about .readmore::after {
-  bottom: 0;
+  background-color: #333333;
+  border: 1px solid #000;
+  border-radius: 4px;
+  bottom: 5px;
+  color: #f2f2f2;
   content: "...";
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   right: 5px;
-  height: 55px;
+  height: 20px;
+  line-height: 0;
+  padding: 1px 5px 5px;
   z-index: 75;
 }
 @media (max-width: 1000px) {
@@ -3561,12 +3539,18 @@ hr::after {
   z-index: 50;
 }
 .home .main-content section.panel-works .readmore::after {
-  bottom: 0;
+  background-color: #333333;
+  border: 1px solid #000;
+  border-radius: 4px;
+  bottom: 5px;
+  color: #f2f2f2;
   content: "...";
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   right: 5px;
-  height: 55px;
+  height: 20px;
+  line-height: 0;
+  padding: 1px 5px 5px;
   z-index: 75;
 }
 @media (max-width: 1000px) {
@@ -3722,7 +3706,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .works .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -3760,7 +3744,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .works .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -3778,7 +3762,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .works .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -3932,23 +3916,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .works .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 .works .main-content {
@@ -3967,6 +3939,9 @@ hr::after {
   min-height: 500px;
   width: 25%;
   z-index: 100;
+}
+.works .main-content .preview-panels section.panel-intro h1 {
+  margin-bottom: 0;
 }
 @media (max-width: 1000px) {
   .works .main-content .preview-panels section.panel-intro {
@@ -4095,7 +4070,7 @@ hr::after {
     width: 50%;
   }
   .works .main-content .preview-panels section.panel-wireframing .overlay h2 {
-    font-size: 1.4em;
+    font-size: 1.35em;
   }
   .works .main-content .preview-panels section.panel-wireframing .overlay .notch::before {
     border: solid transparent;
@@ -4289,7 +4264,7 @@ hr::after {
     width: 50%;
   }
   .works .main-content .preview-panels section.panel-interfaces .overlay h2 {
-    font-size: 1.4em;
+    font-size: 1.35em;
   }
   .works .main-content .preview-panels section.panel-interfaces .overlay .notch::before {
     border: solid transparent;
@@ -4485,7 +4460,7 @@ hr::after {
     width: 50%;
   }
   .works .main-content .preview-panels section.panel-data .overlay h2 {
-    font-size: 1.4em;
+    font-size: 1.35em;
   }
   .works .main-content .preview-panels section.panel-data .overlay .notch::before {
     border: solid transparent;
@@ -4671,7 +4646,7 @@ hr::after {
     width: 50%;
   }
   .works .main-content .preview-panels section.panel-brochures .overlay h2 {
-    font-size: 1.4em;
+    font-size: 1.35em;
   }
   .works .main-content .preview-panels section.panel-brochures .overlay .notch::before {
     border: solid transparent;
@@ -4867,7 +4842,7 @@ hr::after {
     width: 50%;
   }
   .works .main-content .preview-panels section.panel-ios .overlay h2 {
-    font-size: 1.4em;
+    font-size: 1.35em;
   }
   .works .main-content .preview-panels section.panel-ios .overlay .notch::before {
     border: solid transparent;
@@ -4989,6 +4964,7 @@ hr::after {
   width: auto;
 }
 .works .main-content .details-panels section.panel-intro {
+  border-color: transparent;
   color: #f2f2f2;
   float: left;
   font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -5276,7 +5252,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .writing .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -5314,7 +5290,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .writing .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -5332,7 +5308,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .writing .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -5486,23 +5462,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .writing .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 .writing .cover .background {
@@ -5577,7 +5541,7 @@ hr::after {
   top: 51.06382978723404px;
 }
 .about .cover .content .branding h2 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   left: 0;
   right: 0;
@@ -5615,7 +5579,7 @@ hr::after {
 }
 @media (max-width: 600px) {
   .about .cover .content .branding {
-    font-size: 3em;
+    font-size: 2.6em;
     left: 5%;
     position: absolute;
     top: 100px;
@@ -5633,7 +5597,7 @@ hr::after {
     top: 21.27659574468085px;
   }
   .about .cover .content .branding h2 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     left: 0;
     right: 0;
@@ -5787,23 +5751,11 @@ hr::after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 375px;
   }
   .about .cover .background {
     background-position: center;
     background-size: cover;
-    opacity: .5;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    filter: url(/assets/img/filters.svg#blur3);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   }
 }
 @media (max-width: 1000px) {

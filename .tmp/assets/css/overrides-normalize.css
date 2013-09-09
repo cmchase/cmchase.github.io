@@ -38,7 +38,7 @@ body {
   clear: both;
 }
 .main-content .all-posts.posts article.post-link {
-  height: 130px;
+  height: auto;
 }
 .main-content section {
   clear: both;
@@ -59,7 +59,7 @@ body {
 }
 .main-content .posts article.post-link .post-title {
   font-size: 1.4em;
-  line-height: 1.2em;
+  line-height: 1.1em;
 }
 .main-content .posts article.post-link:hover,
 .main-content .posts article.post-link:active {
@@ -99,6 +99,7 @@ body {
   color: #333;
   display: inline-block;
   font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: .9em;
   line-height: 1em;
   left: 5px;
   position: absolute;
@@ -147,6 +148,7 @@ body {
   color: #333;
   display: inline-block;
   font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: .9em;
   line-height: 1em;
   left: 5px;
   position: absolute;
@@ -323,12 +325,18 @@ body {
   z-index: 50;
 }
 .panels section .readmore::after {
-  bottom: 0;
+  background-color: #333333;
+  border: 1px solid #000;
+  border-radius: 4px;
+  bottom: 5px;
+  color: #f2f2f2;
   content: "...";
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   right: 5px;
-  height: 55px;
+  height: 20px;
+  line-height: 0;
+  padding: 1px 5px 5px;
   z-index: 75;
 }
 .panels section.panel-link {

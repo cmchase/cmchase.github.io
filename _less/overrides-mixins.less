@@ -54,7 +54,7 @@
 		top: @cover-logo-size / 2.35; 
 	}
 	h2 {
-		font-size: @font-size-base - 1;
+		font-size: @font-size-base - 2;
 		line-height: 1;
 		left: 0;
 		right: 0;
@@ -148,7 +148,7 @@
 			.branding-mixin();
 			@media(max-width: 600px) {
 				@cover-logo-size: 50px;
-				.branding-mixin(3em);
+				.branding-mixin(2.6em);
 			}
 		}
 		.internal-links {
@@ -255,16 +255,10 @@
 	}
 	@media(max-width: 600px) {
 		.cover-wide();
-		height: 200px;
+		height: 375px;
 		.background {
 			background-position: center;
 			background-size: cover;
-			opacity: .5;
-			top:	-10px;
-			right:	-10px;
-			bottom:	-10px;
-			left:	-10px;
-			.blur(3px);
 		}
 	}
 }
@@ -354,7 +348,7 @@
 			height: 105%;
 			width: 50%;
 			h2 {
-				font-size: 1.4em;
+				font-size: 1.35em;
 			}
 			.notch {
 				&::before {
@@ -395,7 +389,7 @@
 			height: 105%;
 			width: 50%;
 			h2 {
-				font-size: 1.4em;
+				font-size: 1.35em;
 			}
 			.notch {
 				&::before {
@@ -440,12 +434,18 @@
 		z-index: 50;
 	}
 	&::after {
-		bottom: 0;
+		background-color: @text-color;
+		border: 1px solid #000;
+		border-radius: 4px;
+		bottom: 5px;
+		color: @body-bg;
 		content: "...";
 		position: absolute;
-		font-size: 3em;
+		font-size: 2em;
 		right: 5px;
-		height: 55px;
+		height: 20px;
+		line-height: 0;
+		padding: 1px 5px 5px;
 		z-index: 75;
 	}
 }
@@ -457,6 +457,7 @@
 		color: #333;
 		display: inline-block;
 		font-family: @font-family-sans-serif;
+		font-size: .9em;
 		line-height: 1em;
 		left: 5px;
 		position: absolute;
@@ -516,7 +517,7 @@
 		&.posts {
 			article {
 				&.post-link {
-					height: 130px;
+					height: auto;
 				}
 			}
 		}
@@ -538,7 +539,7 @@
 				.transition(all .25s);
 				.post-title {
 					font-size: 1.4em;
-					line-height: 1.2em;
+					line-height: 1.1em;
 				}
 				&:hover, 
 				&:active {
