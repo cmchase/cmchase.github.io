@@ -22,8 +22,8 @@ My wife doesn't really ask a lot of me. I'm a lucky man. She doesn't nag me and 
 
 Let me tell you, there's nothing more confusing to a hair stylist asking what you want than to say, "I don't care." I don't know if it was an act of defiance or just stupidity, but I couldn't have been more indifferent about what they did to my hair. Maybe I was daring them to give me a reason to cut it off, I don't know.
 
-There I was today with my greasy-ass hair, staring at a full bookshelf and my unplanned collection of crappy pens, when I decided that I had had enough. Simplicity and clarity don't come easily, and they don't come for the complacent. I acted.
+There I was today with my greasy-ass hair, staring at a full bookshelf and my unplanned collection of crappy pens. I'm not sure why, but something about these three little things just pushed a button and I decided that I had had enough. Simplicity and clarity don't come easily, and they don't come for the complacent. This was a day of reckoning and purge.
 
 Now there's a bag of hair and pens in the alley and a pile of books at the door I'll be taking into the office tomorrow. (Maybe I should bring the hair, too. You never know…)
 
-For what it's worth, I've apologized to my wife but I think I'll be on high-alert for sneaky bullshit I don't actually want in my life.
+For what it's worth, I've apologized to my wife but I think I'll be on high-alert for sneaky bullshit and I'm eyeballing that drawer for t-shirts next.
