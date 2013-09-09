@@ -61,16 +61,16 @@ hr {
 		@cover-fg-color: #fff;
 		@cover-logo-size: 120px;
 		.cover-mixin();
-		.cover-wide();
-		height: 400px;
+		//.cover-wide();
 	}
 	.main-content {
 		.main-content-panels();
 		section {
 			&.panel-latest-post {
 				border-color: transparent;
+				height: 650px;
 				.transition(border-left .25s);
-				width: 45%;
+				width: 60%;
 				.post {
 					h1.post-title {
 						margin-top: 0;
@@ -80,6 +80,7 @@ hr {
 					border-left: 5px solid #333;
 				}
 				@media(max-width: 1000px) {
+					max-height: 250px;
 					width: 56%;
 				}
 				@media(max-width: 600px) {
@@ -90,16 +91,16 @@ hr {
 			}
 			&.panel-about {
 				@_bg-color: #fff;
-				width: 25%;
+				width: 40%;
 				.background {
 					background-image: url(/assets/img/covers/mugshot.jpg);
 					background-position: left top;
-					background-size: 100% auto;
+					background-size: 80% auto;
 				}
 				.overlay {
 					background-color: @_bg-color;
 					left: auto;
-					width: 60%;
+					width: 65%;
 					.notch {
 						&::before {
 							.notch-mixin-on-left(@text-color, 1px, 50px);
@@ -127,9 +128,8 @@ hr {
 			}
 			&.panel-works {
 				@_bg-color: #fff;
-				float: right;
-				height: 500px;
-				width: 30%;
+				height: 400px;
+				width: 40%;
 				.background {
 					background-image: url(/assets/img/covers/blocks.jpg);
 					background-position: left top;
@@ -199,7 +199,7 @@ hr {
 			&.panel-posts {
 				@_bg-color: @body-bg;
 				border-color: transparent;
-				width: 70%;
+				width: 100%;
 				article {
 					background-color: @_bg-color;
 				}
@@ -217,8 +217,8 @@ hr {
 		@cover-fg-color: #fff;
 		@cover-logo-size: 120px;
 		.cover-mixin();
-		.cover-wide();
-		height: 400px;
+		//.cover-wide();
+		//height: 400px;
 	}
 	.main-content {
 		.main-content-panels();
@@ -226,14 +226,12 @@ hr {
 			section {
 				cursor: pointer;
 				&.panel-intro {
-					border-bottom-width: 0;
+					border-color: transparent;
 					cursor: default;
-					min-height: 500px;
-					width: 25%;
+					height: auto;
+					min-height: 0;
+					width: 100%;
 					z-index: 100;
-					h1 {
-						margin-bottom: 0;
-					}
 					@media(max-width: 1000px) {
 						border-bottom-width: 1px;
 						height: auto;
@@ -242,7 +240,7 @@ hr {
 					}
 				}
 				&.panel-wireframing {
-					width: 45%;
+					width: 50%;
 					.background {
 						background-image: url(/assets/img/works/wireframes/cover.jpg);
 						background-position: 7% top;
@@ -256,7 +254,7 @@ hr {
 						@_bg-color: #fff;
 						background-color: @_bg-color;
 						left: auto;
-						width: 40%;
+						width: 60%;
 						.notch {
 							&::before {
 								.notch-mixin-on-left(@text-color, 1px, 0);
@@ -301,7 +299,7 @@ hr {
 					}
 				}
 				&.panel-interfaces {
-					width: 30%;
+					width: 50%;
 					.background {
 						background-image: url(/assets/img/works/interfaces/cover.jpg);
 						background-position: left top;
@@ -352,7 +350,7 @@ hr {
 					}
 				}
 				&.panel-data {
-					width: 28%;
+					width: 40%;
 					.background {
 						background-image: url(/assets/img/works/data/cover.jpg);
 						background-position: left top;
@@ -361,20 +359,20 @@ hr {
 					.overlay {
 						@_bg-color: @body-bg-offset;
 						background-color: @_bg-color;
-						right: auto;
-						width: 55%;
+						//bottom: auto;
+						height: 55%;
 						.notch {
 							&::before {
-								.notch-mixin-on-right(@text-color, 1px, -100px);
+								.notch-mixin-on-bottom(@text-color, 1px, -100px);
 							}
 							&::after {
-								.notch-mixin-on-right(@_bg-color, 0, -100px);
+								.notch-mixin-on-bottom(@_bg-color, 0, -100px);
 							}
 						}
 					}
 					&:hover {
 						.overlay {
-							//height: 52%;
+							height: 65%;
 						}
 					}
 					@media(max-width: 1000px) {		
@@ -412,7 +410,7 @@ hr {
 					}
 				}
 				&.panel-brochures {
-					width: 25%;
+					width: 30%;
 					.background {
 						background-image: url(/assets/img/works/brochures/cover.jpg);
 						background-position: left top;
@@ -459,7 +457,7 @@ hr {
 				&.panel-ios {
 					@_bg-color: #fff;
 					float: left;
-					width: 22%;
+					width: 30%;
 					.background {
 						background-image: url(/assets/img/works/ios/cover.jpg);
 						background-position: left top;
@@ -480,7 +478,7 @@ hr {
 					}
 					&:hover {
 						.overlay {
-							height: 65%;
+							height: 75%;
 						}
 					}
 					@media(max-width: 1000px) {
@@ -517,7 +515,6 @@ hr {
 		}
 		.details-panels {
 			.clearfix();
-			//font-family: @font-family-sans-serif;
 			height: auto;
 			min-height: 100%;
 			left: 0;
@@ -536,18 +533,13 @@ hr {
 				width: auto;
 				
 				&.panel-intro {
-					@_width: 36%;
 					border-color: transparent;
-					color: @body-bg;
-					float: left;
-					font-family: @font-family-sans-serif;
-					height: 100%;
-					text-shadow: 0 1px 0 #000;
-					width: @_width;
+					float: left;					
 					z-index: 75;
 					.transition(opacity .5s);
 					a.btn-pill {
 						.transition(all .25s);
+						background-color: #fff;
 						border-radius: 5px;
 						border: 1px solid #333;
 						color: #333;
@@ -557,14 +549,14 @@ hr {
 					}
 					a.close {
 						border: none;
-						color: @body-bg;
+						color: @text-color;
 						font-size: 2em;
 						line-height: 75px;
 						opacity: 1;
 						position: absolute;
 						right: 0;
 						text-align: center;
-						text-shadow: 0 1px 0 #000;
+						text-shadow: 0 1px 0 #fff;
 						top: -5px;
 						width: 75px;
 						.transition(all .1s);
@@ -581,15 +573,13 @@ hr {
 					}
 				}
 				&.panel-content {
-					background-color: rgba(255, 255, 255, .98);
+					background-color: rgba(251,251,251,.98);
 					.clearfix();
-					@_width: 64%;
-					height: auto;
-					float: right;
+					height: 100%;
+					float: left;
 					padding-bottom: 25px;
-					width: @_width;
 					z-index: 50;
-					.transition(width .25s);
+					.transition(opacity .5s);
 					h2 {
 						margin-top: 10px; 
 					}
@@ -605,7 +595,7 @@ hr {
 				}
 			}
 			&.active-panels {
-				background-color: rgba(51,51,51,.98);
+				background-color: @body-bg-offset;
 				width: 100%;
 				z-index: 100;
 				section {
@@ -613,19 +603,21 @@ hr {
 						overflow: visible;
 						border-bottom-width: none;
 						a.btn-pill {
-							color: #fff;
-							border-color: #fff;
+							font-family: @font-family-sans-serif;;
+							border-color: #333;
 							&:hover {
-								color: #333;
-								background-color: @body-bg;
-								border-color: @body-bg;
-								text-shadow: 0 1px 0 #fff;
+								color: @body-bg;
+								background-color: @text-color;
+								border-color: @text-color;
+								text-shadow: 0 1px 0 #000;
 							}
 						}
 						.notch {
+							&::before {
+								.notch-mixin-on-bottom(#b3b3b3, 1px, -40%);
+							}
 							&::after {
-								.notch-mixin-on-right(#333, 0);
-								top: 40px;
+								.notch-mixin-on-bottom(@body-bg-offset, 0, -40%);
 							}
 						}
 						@media(max-width: 600px) {
@@ -636,21 +628,16 @@ hr {
 							top: auto; 
 							width: 100%;
 							min-height: auto !important;
-							.notch {
-								&::after {
-									.notch-mixin-on-bottom(#333, 0, -40%);
-								}
-							}
 						}
 					}
 					&.panel-content {
+						width: 100%;
 						@media(max-width: 600px) {
 							bottom: auto;
 							left: auto; 
 							position: relative;
 							right: auto; 
 							top: auto; 
-							width: 100%;
 						}
 					}
 				}
@@ -668,12 +655,12 @@ hr {
 				position: relative;
 				width: 200px;
 				&:hover {
-					border-color: @body-bg-offset;
+					border-color: @text-color-light;
 				}
 				&.active-thumb {
-					border-color: #333;
+					border-color: @text-color-light;
 					&::after {
-						.notch-mixin-on-bottom(#333, 10px);
+						.notch-mixin-on-bottom(@text-color-light, 10px);
 					}
 				}
 				img {
@@ -689,6 +676,9 @@ hr {
 				cursor: pointer;
 				margin-top: 25px;
 				max-width: 100%;
+			}
+			.works-full-image {
+				clear: both;
 			}
 		}
 	}

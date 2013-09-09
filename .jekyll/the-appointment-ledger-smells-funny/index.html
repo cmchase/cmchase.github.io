@@ -892,12 +892,10 @@
 
     <main class="main-content">
         <article class="post">
-	<header><h1 class="post-title">The Appointment Ledger Smells Funny</h1></header>
-	<time>
-    	<span class="month">Jul</span>
-    	<span class="day">15</span>
-    	<span class="year">2013</span>
-	</time>
+    <header>
+        <h1 class="post-title">The Appointment Ledger Smells Funny</h1>
+        <h2 class="post-date">July 15, 2013</h2>
+    </header>
 	<p>I recently posted about how <a href="/ios-brain-leak/">my brain leaks out all the Objective-C I know</a> if I go too long without using it, which is barely an exaggeration,  so I made some time in my day this past Friday to clear out a last-minute bug. In that same post, I mentioned how I fell in love with NSNotificationCenter, which I used to try to handle a bug where the UI gets all wonky if the the user taps the VIN Search button while the user had focus on the SearchBar. (I&#39;m simply disabling the VIN Search button until the SearchBar resigns first responder.)</p>
 
 <p><a href="/assets/img/2013/07/ledger.png"><img src="/assets/img/2013/07/ledger-300x227.png" alt="Tapping the VIN Search button while the SearchBar had first responder would cause the SearchBar to scroll up behind the UINavigationController."></a></p>

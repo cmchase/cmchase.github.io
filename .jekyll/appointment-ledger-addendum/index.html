@@ -892,12 +892,10 @@
 
     <main class="main-content">
         <article class="post">
-	<header><h1 class="post-title">Appointment Ledger: Addendum</h1></header>
-	<time>
-    	<span class="month">Jul</span>
-    	<span class="day">16</span>
-    	<span class="year">2013</span>
-	</time>
+    <header>
+        <h1 class="post-title">Appointment Ledger: Addendum</h1>
+        <h2 class="post-date">July 16, 2013</h2>
+    </header>
 	<p>Not 18 hours after posting about <a href="/the-appointment-ledger-smells-funny/">a weird code smell</a>, we found a better solution to using NotificationCenter: exclusiveTouch. Actually, by &quot;we&quot; I mean &quot;John&quot;, the principal software developer I&#39;m working with for our lane application.</p>
 
 <p>Setting exclusiveTouch to YES within the child controller for the buttons navigationController.navigationBar totally did the trick. We still have to use the NotificationCenter elsewhere, but John&#39;s solution is much cleaner.</p>

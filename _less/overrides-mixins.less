@@ -499,11 +499,19 @@
 }
 
 .main-content-panels() {
-	left: 0;
-	max-width: 100%;
-	padding: 0;
-	position: relative;
-	width: 100%;
+	position: absolute;
+	padding: 0 0 50px 0;
+	top: 0; right: 0; left: 30%;
+	max-width: 900px;
+	text-shadow: 0 1px 0 #fff;
+	@media(max-width: 1000px) {
+		left: 0;
+		max-width: 100%;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+	
 }
 
 .main-content {
@@ -577,11 +585,17 @@
 		position: relative;
 		.post-time();
 		.post-title {
-			min-height: 2em;
-			padding-left: 60px;
+			font-size: 2em;
+			//min-height: 2em;
+			margin-bottom: 0;
+			//padding-left: 60px;
 			@media(max-width: 600px) {
-				font-size: 1.6em;
 			}
+		}
+		.post-date {
+			color: @text-color-light;
+			font-size: .9em;
+			margin: 0 0 20px 25px;
 		}
 	}
 	.post-navigation {
@@ -618,8 +632,9 @@
 	section {
 		@padding: 20px;
 		border: 1px solid transparent;
-		border-right: 1px solid lighten(@text-color, 50%);
-		border-bottom: 1px solid lighten(@text-color, 50%);
+		border-color: lighten(@text-color, 50%);
+		// border-right: 1px solid lighten(@text-color, 50%);
+		// border-bottom: 1px solid lighten(@text-color, 50%);
 		-webkit-box-sizing: border-box; 
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;     
@@ -631,15 +646,10 @@
 		padding: @padding/2 @padding;
 		position: relative;
 		h1 {			
-			margin-top: 0;
-			line-height: 1em;
-			min-height: 50px;
 			@media(max-width: 600px) {
 				font-size: 1.6em;
 				min-height: 0;
 			}
-		}
-		h2 {
 		}
 		.background {
 			background-size: cover;
