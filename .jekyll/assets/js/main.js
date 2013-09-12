@@ -18,11 +18,10 @@
       selector = $(".panels.details-panels." + $(this).data("workgroup"));
       selector.addClass("active-panels").removeClass("inactive-panels");
       if ($(window).width() > 601) {
-        selector.find("section").css("min-height", selector.parent().height());
+        return window.scrollTo(0);
       } else {
-        selector.find("section.panel-content").css("min-height", selector.parent().height() - selector.find("section.panel-intro").height());
+        return window.scrollTo(0, $("aside.cover").height());
       }
-      return window.scrollTo(0, $("aside.cover").height());
     });
     $("a.close").on("click", function() {
       return $(".active-panels").removeClass("active-panels").addClass("inactive-panels").find("section").removeAttr("style");
