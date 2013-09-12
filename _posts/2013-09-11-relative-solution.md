@@ -30,7 +30,7 @@ Designers often have to work within a lot of tight limitations - **we design for
 
 ## The Solution 
 
-This was ultimately a visual problem and no amount of measuring would solve this on its own. I hung the mirror where I needed it to be and eyeballed it to level. From here I used the mirror as my point of reference, measuring and remeasuring for each of the 3 other pieces.
+This was ultimately a visual problem and no amount of measuring would solve this on its own and, just like any other problem, I had to start somewhere. Jumping in, I hung the mirror where I needed it to be and eyeballed it to level. From here I used the mirror as my point of reference, measuring and remeasuring for each of the 3 other pieces.
 
 While crude, this works. It is not a perfect solution, but the 4 pieces look level and fit well in the space. Things start falling a part when you remove context, though. Without the visual weight of the mirror, the 3 pieces look like they're stagger above each other. If, by magic, you remove the house and leave the 4 hanging in the air they'd totally look misaligned and crooked.
 
