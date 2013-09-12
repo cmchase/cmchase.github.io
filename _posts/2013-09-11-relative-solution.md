@@ -6,8 +6,6 @@ preview: "/assets/img/2013/mirror.jpg"
 
 What was supposed to be a 30-minute chore turned into a frustrating reminder that maddening design constraints aren't limited to my day job.
 
-<hr>
-
 ## The Chore
 
 My wife asked me to hang a large mirror in the dining room along with 3 little pieces along side it. No problem. I'll just grab my drill, measuring tape, level and **_AW-CRAP_**.
