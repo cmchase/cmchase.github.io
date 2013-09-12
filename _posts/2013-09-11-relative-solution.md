@@ -34,6 +34,8 @@ This was ultimately a visual problem and no amount of measuring would solve this
 
 While crude, this works. It is not a perfect solution, but the 4 pieces look level and fit well in the space. Things start falling a part when you remove context, though. Without the visual weight of the mirror, the 3 pieces look like they're stagger above each other. If, by magic, you remove the house and leave the 4 hanging in the air they'd totally look misaligned and crooked.
 
+As for the shadow - screw it. There's nothing I can do about the orientation of my house or the sun, and leaving the wall bare just isn't an option. I can't solve that problem and, you know what, it's probably not even a real problem. 
+
 ## The Lesson
 
 Without proper context, it's hard to say whether a design solution really works. Dribbble shots don't even try to communicate a whole, portfolios rarely go into explanation about the problems being solve, and sometimes constraints can be too complicated to succinctly describe.
