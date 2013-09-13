@@ -12,65 +12,9 @@ class: "home"
         		<h2 class="post-date">{{ post.date | date: '%B %d, %Y'}}</h2>
 	        	<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 	        </header>
+	        {{ post.excerpt }}
 		</article>
 	{% endfor %}
 </section>
 
-
-
-<div class="panels" style="display: none;">
-	{% for post in site.posts limit:1 %}
-	<section class="panel-latest-post panel-link" data-link="{{ post.url }}">
-		<article class="post">
-	        <header>
-	        	<h1 class="post-title">{{ post.title }}</h1>
-        		<h2 class="post-date">{{ post.date | date: '%B %d, %Y'}}</h2>
-	        </header>
-	        {{ post.content }}
-
-	    	<a href="{{ post.url }}" class="data-link">View Post</a>
-		</article>
-    	<span class="readmore"></span>
-	</section>
-	{% endfor %}
-
-	<section class="panel-about panel-link" data-link="/about/">
-		<div class="background"></div>
-		<div class="overlay">
-			<span class="notch"></span>
-			<header><h2>About Me</h2></header>
-			<p>As the Lead Web Dev for a software company in Clearwater, FL, I manage a small team for the front-end development and UI design on a large web app.</p>
-	    	<span class="readmore"></span>
-		</div>
-    	<a href="/about/" class="data-link">About Me</a>
-	</section>
-
-	<section class="panel-works panel-link" data-link="/works/">
-		<div class="background"></div>
-		<div class="overlay">
-			<span class="notch"></span>
-			<header><h2>Works</h2></header>
-			<p>I primarily work in ASP.NET Web Forms, C#, JavaScript, jQuery, HTML and CSS. I have insight on the programming side of things, but my strengths really lie in the front-end.</p>
-	    	<span class="readmore"></span>
-		</div>
-
-    	<a href="/works/" class="data-link">See what I do</a>
-	</section>
-
-	<section class="panel-posts posts">
-	<h2 class="hidden-lg">More Posts</h2>
-	{% for post in site.posts limit:6 offset:1 %}	
-		<article class="post post-link half" data-link="{{ post.url }}">
-			<time>
-		    	<span class="month">{{ post.date | date: '%b'}}</span>
-		    	<span class="day">{{ post.date | date: '%d'}}</span>
-		    	<span class="year">{{ post.date | date: '%Y'}}</span>
-	    	</time>
-	        <h3 class="post-title">{{ post.title }}</h3>
-
-    		<a href="{{ post.url }}" class="data-link">View Post</a>
-		</article>
-	{% endfor %}
-	</section>
-</div>
 <hr>
