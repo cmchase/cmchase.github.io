@@ -1,0 +1,17 @@
+/* Overrides ../_bower_components/bootstrap/less/variables.less */
+body {
+  font: normal 125%/1.4 Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+@font-face {
+  font-family: 'akg-m-web';
+  src: url('/assets/fonts/akg-m-web.eot');
+  src: url('/assets/fonts/akg-m-web.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/akg-m-web.ttf') format('truetype'), url('/assets/fonts/akg-m-web.svg#ag-web') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+.btn {
+  font-family: "akg-m-web", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}

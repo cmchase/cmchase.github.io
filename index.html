@@ -4,7 +4,21 @@ title: Cory Chase, St Petersburg/Tampa, FL Front-End Web Developer and Designer
 cover: "/assets/img/covers/driveway.jpg"
 class: "home"
 ---
-<div class="panels">
+
+<section class="posts">
+{% for post in site.posts limit:10 %}
+		<article class="post">
+	        <header>	        
+        		<h2 class="post-date">{{ post.date | date: '%B %d, %Y'}}</h2>
+	        	<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	        </header>
+		</article>
+	{% endfor %}
+</section>
+
+
+
+<div class="panels" style="display: none;">
 	{% for post in site.posts limit:1 %}
 	<section class="panel-latest-post panel-link" data-link="{{ post.url }}">
 		<article class="post">

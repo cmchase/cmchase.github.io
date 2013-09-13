@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Challenge of Simplicity"
+title: "The Challenge of Simplicity"
 cover: "/assets/img/covers/hair.jpg"
 ---
 
