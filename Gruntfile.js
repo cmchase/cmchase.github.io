@@ -27,37 +27,37 @@ grunt.loadNpmTasks('grunt-contrib-less');
     yeoman: yeomanConfig,
 
     watch: {
-      less: {
-        files: ['<%= yeoman.app %>/_less/**/*.less'],
-        tasks: ['less:server']
-      },
-      coffee: {
-        files: ['<%= yeoman.app %>/_src/**/*.coffee'],
-        tasks: ['coffee:server']
-      },
-      coffeeTest: {
-        files: ['test/spec/**/*.coffee'],
-        tasks: ['coffee:test']
-      },
-      jekyll: {
-        files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-                '_config.yml',
-                '!<%= yeoman.app %>/_bower_components',
-                '!**/node_modules/**',
-                '!**/_gh_pages/**'],
-        tasks: ['jekyll:server']
-      },
-      livereload: {
-        options: {
-          livereload: liveReloadPort
-        },
-        files: [
-          '.jekyll/**/*.html',
-          '{.tmp,<%= yeoman.app %>}/assets/css/**/*.css'
-          // '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          // '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
-      }
+      // less: {
+      //   files: ['<%= yeoman.app %>/_less/**/*.less'],
+      //   tasks: ['less:server']
+      // },
+      // coffee: {
+      //   files: ['<%= yeoman.app %>/_src/**/*.coffee'],
+      //   tasks: ['coffee:server']
+      // },
+      // coffeeTest: {
+      //   files: ['test/spec/**/*.coffee'],
+      //   tasks: ['coffee:test']
+      // },
+      // jekyll: {
+      //   files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
+      //           '_config.yml',
+      //           '!<%= yeoman.app %>/_bower_components',
+      //           '!**/node_modules/**',
+      //           '!**/_gh_pages/**'],
+      //   tasks: ['jekyll:server']
+      // },
+      // livereload: {
+      //   options: {
+      //     livereload: liveReloadPort
+      //   },
+      //   files: [
+      //     '.jekyll/**/*.html',
+      //     '{.tmp,<%= yeoman.app %>}/assets/css/**/*.css'
+      //     // '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
+      //     // '<%= yeoman.app %>/assets/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+      //   ]
+      // }
     },
     connect: {
       options: {
