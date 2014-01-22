@@ -3555,6 +3555,7 @@ hr::after {
   }
 }
 .works .main-content .preview-panels section {
+  border-color: #333;
   cursor: pointer;
 }
 .works .main-content .preview-panels section.panel-intro {
@@ -3574,7 +3575,8 @@ hr::after {
   }
 }
 .works .main-content .preview-panels section.panel-wireframing {
-  width: 50%;
+  margin: 1%;
+  width: 48%;
 }
 .works .main-content .preview-panels section.panel-wireframing .background {
   background-image: url(/assets/img/works/wireframes/cover.jpg);
@@ -3628,7 +3630,7 @@ hr::after {
 }
 @media (max-width: 1000px) {
   .works .main-content .preview-panels section.panel-wireframing {
-    width: 65%;
+    width: 63%;
   }
   .works .main-content .preview-panels section.panel-wireframing .overlay {
     background-color: #ffffff;
@@ -3771,7 +3773,8 @@ hr::after {
   }
 }
 .works .main-content .preview-panels section.panel-interfaces {
-  width: 50%;
+  margin: 1%;
+  width: 48%;
 }
 .works .main-content .preview-panels section.panel-interfaces .background {
   background-image: url(/assets/img/works/interfaces/cover.jpg);
@@ -3824,7 +3827,7 @@ hr::after {
 }
 @media (max-width: 1000px) {
   .works .main-content .preview-panels section.panel-interfaces {
-    width: 35%;
+    width: 33%;
   }
   .works .main-content .preview-panels section.panel-interfaces .overlay {
     height: 40%;
@@ -3965,7 +3968,8 @@ hr::after {
   }
 }
 .works .main-content .preview-panels section.panel-data {
-  width: 40%;
+  margin: 1%;
+  width: 38%;
 }
 .works .main-content .preview-panels section.panel-data .background {
   background-image: url(/assets/img/works/data/cover.jpg);
@@ -4163,7 +4167,8 @@ hr::after {
   }
 }
 .works .main-content .preview-panels section.panel-brochures {
-  width: 30%;
+  margin: 1%;
+  width: 28%;
 }
 .works .main-content .preview-panels section.panel-brochures .background {
   background-image: url(/assets/img/works/brochures/cover.jpg);
@@ -4173,7 +4178,7 @@ hr::after {
 .works .main-content .preview-panels section.panel-brochures .overlay {
   background-color: #ffffff;
   top: auto;
-  height: 50%;
+  height: 48%;
 }
 .works .main-content .preview-panels section.panel-brochures .overlay .notch::before {
   border: solid transparent;
@@ -4214,7 +4219,7 @@ hr::after {
 }
 @media (max-width: 1000px) {
   .works .main-content .preview-panels section.panel-brochures {
-    width: 50%;
+    width: 48%;
   }
   .works .main-content .preview-panels section.panel-brochures .overlay {
     background-color: #ffffff;
@@ -4350,7 +4355,8 @@ hr::after {
 }
 .works .main-content .preview-panels section.panel-ios {
   float: left;
-  width: 30%;
+  margin: 1%;
+  width: 28%;
 }
 .works .main-content .preview-panels section.panel-ios .background {
   background-image: url(/assets/img/works/ios/cover.jpg);
@@ -4401,7 +4407,7 @@ hr::after {
 }
 @media (max-width: 1000px) {
   .works .main-content .preview-panels section.panel-ios {
-    width: 50%;
+    width: 48%;
   }
   .works .main-content .preview-panels section.panel-ios .overlay {
     background-color: #e5e5e5;
@@ -4591,8 +4597,8 @@ hr::after {
   border-color: transparent;
   float: left;
   z-index: 75;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s ease 0.25s;
+  transition: opacity 0.5s ease 0.25s;
 }
 .works .main-content .details-panels section.panel-intro a.btn-pill {
   -webkit-transition: all 0.25s;
@@ -4620,8 +4626,19 @@ hr::after {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
+.works .main-content .details-panels section.panel-intro a.close::after {
+  content: "\2190";
+  position: absolute;
+  left: -14px;
+  top: -5px;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
 .works .main-content .details-panels section.panel-intro a.close:hover {
   font-size: 3em;
+}
+.works .main-content .details-panels section.panel-intro a.close:hover::after {
+  left: -38px;
 }
 @media (max-width: 1000px) {
   .works .main-content .details-panels section.panel-intro a.close {
@@ -4640,8 +4657,8 @@ hr::after {
   float: left;
   padding-bottom: 25px;
   z-index: 50;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .works .main-content .details-panels section.panel-content:before,
 .works .main-content .details-panels section.panel-content:after {
@@ -4676,6 +4693,10 @@ hr::after {
   opacity: 0;
   width: 0;
   z-index: 0;
+}
+.works .main-content .details-panels.inactive-panels section.panel-content {
+  -webkit-transition: none;
+  transition: none;
 }
 .works .main-content .details-panels.active-panels {
   background-color: #e5e5e5;

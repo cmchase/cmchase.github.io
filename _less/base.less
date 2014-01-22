@@ -80,6 +80,7 @@ hr {
 		.main-content-panels();
 		.preview-panels {
 			section {
+				border-color: #333;
 				cursor: pointer;
 				&.panel-intro {
 					border-color: transparent;
@@ -96,7 +97,8 @@ hr {
 					}
 				}
 				&.panel-wireframing {
-					width: 50%;
+					margin: 1%;
+					width: 48%;
 					.background {
 						background-image: url(/assets/img/works/wireframes/cover.jpg);
 						background-position: 7% top;
@@ -126,7 +128,7 @@ hr {
 						}
 					}
 					@media(max-width: 1000px) {
-						width: 65%;
+						width: 63%;
 						.overlay {
 							@_bg-color: #fff;
 							background-color: @_bg-color;
@@ -155,7 +157,8 @@ hr {
 					}
 				}
 				&.panel-interfaces {
-					width: 50%;
+					margin: 1%;
+					width: 48%;
 					.background {
 						background-image: url(/assets/img/works/interfaces/cover.jpg);
 						background-position: left top;
@@ -180,7 +183,7 @@ hr {
 						}
 					}
 					@media(max-width: 1000px) {
-						width: 35%;
+						width: 33%;
 						.overlay {
 							height: 40%;
 							width: auto;
@@ -206,7 +209,8 @@ hr {
 					}
 				}
 				&.panel-data {
-					width: 40%;
+					margin: 1%;
+					width: 38%;
 					.background {
 						background-image: url(/assets/img/works/data/cover.jpg);
 						background-position: left top;
@@ -266,7 +270,8 @@ hr {
 					}
 				}
 				&.panel-brochures {
-					width: 30%;
+					margin: 1%;
+					width: 28%;
 					.background {
 						background-image: url(/assets/img/works/brochures/cover.jpg);
 						background-position: left top;
@@ -276,7 +281,7 @@ hr {
 						@_bg-color: #fff;
 						background-color: @_bg-color;
 						top: auto;
-						height: 50%;
+						height: 48%;
 						.notch {
 							&::before {
 								.notch-mixin-on-top(@text-color, 1px, 50px);
@@ -292,7 +297,7 @@ hr {
 						}
 					}
 					@media(max-width: 1000px) {
-						width: 50%;
+						width: 48%;
 						.overlay {
 						@_bg-color: #fff;
 						background-color: @_bg-color;
@@ -313,7 +318,8 @@ hr {
 				&.panel-ios {
 					@_bg-color: #fff;
 					float: left;
-					width: 30%;
+					margin: 1%;
+					width: 28%;
 					.background {
 						background-image: url(/assets/img/works/ios/cover.jpg);
 						background-position: left top;
@@ -339,7 +345,7 @@ hr {
 					}
 					@media(max-width: 1000px) {
 						@_bg-color: @body-bg-offset;
-						width: 50%;
+						width: 48%;
 						.overlay {
 							background-color: @_bg-color;
 							bottom: -1px;
@@ -392,7 +398,7 @@ hr {
 					border-color: transparent;
 					float: left;					
 					z-index: 75;
-					.transition(opacity .5s);
+					.transition(opacity .5s ease .25s);
 					a.btn-pill {
 						.transition(all .25s);
 						background-color: #fff;
@@ -416,8 +422,18 @@ hr {
 						top: -5px;
 						width: 75px;
 						.transition(all .1s);
+						&::after {
+							content: "\2190";
+							position: absolute;
+							left: -14px;
+							top: -5px;
+							.transition(left .2s);
+						}
 						&:hover {
 							font-size: 3em;
+							&::after {
+								left: -38px;
+							};
 						}
 						@media(max-width: 1000px) {
 							right: -10px;
@@ -435,7 +451,7 @@ hr {
 					float: left;
 					padding-bottom: 25px;
 					z-index: 50;
-					.transition(opacity .5s);
+					.transition(all .25s);
 					h2 {
 						margin-top: 10px; 
 					}
@@ -448,6 +464,9 @@ hr {
 					opacity: 0;
 					width: 0;
 					z-index: 0;
+					&.panel-content {
+						.transition(none);
+					}
 				}
 			}
 			&.active-panels {

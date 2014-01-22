@@ -27,10 +27,10 @@ grunt.loadNpmTasks('grunt-contrib-less');
     yeoman: yeomanConfig,
 
     watch: {
-      // less: {
-      //   files: ['<%= yeoman.app %>/_less/**/*.less'],
-      //   tasks: ['less:server']
-      // },
+      less: {
+        files: ['<%= yeoman.app %>/_less/**/*.less'],
+        tasks: ['less:server']
+      }
       // coffee: {
       //   files: ['<%= yeoman.app %>/_src/**/*.coffee'],
       //   tasks: ['coffee:server']
